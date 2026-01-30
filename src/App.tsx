@@ -10,6 +10,7 @@ import FAQ from "./pages/FAQ";
 import Complaints from "./pages/Complaints";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
 // Service Pages
 import CashFinancing from "./pages/services/CashFinancing";
 import RealEstateDevelopment from "./pages/services/RealEstateDevelopment";
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/complaints" element={<Complaints />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/blog" element={<Blog />} />
           {/* Service Routes */}
           <Route path="/services/cash-financing" element={<CashFinancing />} />
           <Route path="/services/development" element={<RealEstateDevelopment />} />
