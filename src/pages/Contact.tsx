@@ -28,8 +28,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "البريد الإلكتروني",
-    value: "info@excellence-realestate.sa",
-    href: "mailto:info@excellence-realestate.sa",
+    value: "alm312464@gmail.com",
+    href: "mailto:alm312464@gmail.com",
     description: "راسلنا في أي وقت",
   },
   {
