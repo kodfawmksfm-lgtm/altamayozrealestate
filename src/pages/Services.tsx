@@ -2,13 +2,18 @@ import { Layout } from "@/components/layout";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { TrustBadges } from "@/components/ui/TrustBadges";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { 
   Banknote, 
   Building2, 
   TrendingUp, 
   Home, 
   Paintbrush, 
-  Megaphone
+  Megaphone,
+  MessageCircle,
+  Phone,
+  Sparkles
 } from "lucide-react";
 
 import service1 from "@/assets/financing.png";
@@ -60,6 +65,9 @@ const services = [
   },
 ];
 
+const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
+const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+
 const Services = () => {
   return (
     <Layout>
@@ -72,9 +80,47 @@ const Services = () => {
         variant="service"
       />
 
+      {/* Quick Action Bar */}
+      <section className="py-4 bg-gold sticky top-20 z-40 shadow-lg">
+        <div className="container-rtl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-gold-foreground">
+              <Sparkles className="w-5 h-5" />
+              <span className="font-bold">استشارة مجانية</span>
+              <span className="hidden sm:inline">- اختر الخدمة المناسبة وتواصل معنا</span>
+            </div>
+            <div className="flex gap-3">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="bg-trust hover:bg-trust/90 text-white gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  واتساب
+                  <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <a href="tel:+966550857533">
+                <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
+                  <Phone className="w-4 h-4" />
+                  اتصل الآن
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="section-padding bg-background">
         <div className="container-rtl">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-primary/10 text-primary">اختر خدمتك</Badge>
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              6 خدمات عقارية متكاملة
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              اضغط على الخدمة التي تناسبك للتعرف على التفاصيل والتواصل معنا
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <ServiceCard key={service.title} {...service} />
@@ -87,6 +133,7 @@ const Services = () => {
       <section className="section-padding bg-muted/30">
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-12">
+            <Badge className="mb-4 bg-trust/10 text-trust">ثقة وأمان</Badge>
             <h2 className="text-3xl font-bold text-foreground mb-4">
               لماذا تختار خدماتنا؟
             </h2>
@@ -95,6 +142,37 @@ const Services = () => {
             </p>
           </div>
           <TrustBadges variant="grid" />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 bg-gold">
+        <div className="container-rtl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-right">
+              <h3 className="text-2xl font-bold text-gold-foreground mb-2">
+                لم تجد ما تبحث عنه؟ تواصل معنا!
+              </h3>
+              <p className="text-gold-foreground/80">
+                فريقنا متاح لمساعدتك في إيجاد الحل المناسب
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-trust hover:bg-trust/90 text-white gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  واتساب
+                  <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <a href="tel:+966550857533">
+                <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
+                  <Phone className="w-5 h-5 ml-2" />
+                  اتصل الآن
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
