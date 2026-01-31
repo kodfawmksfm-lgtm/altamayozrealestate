@@ -105,7 +105,7 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-gold-foreground" />
               </a>
               <a
-                href="mailto:info@excellence-realestate.sa"
+                href="mailto:alm312464@gmail.com"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
                 aria-label="راسلنا بالبريد"
               >
@@ -181,10 +181,10 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold shrink-0" />
                 <a
-                  href="mailto:info@excellence-realestate.sa"
+                  href="mailto:alm312464@gmail.com"
                   className="text-primary-foreground/80 hover:text-gold transition-colors text-sm"
                 >
-                  info@excellence-realestate.sa
+                  alm312464@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
