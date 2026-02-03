@@ -397,6 +397,16 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Legal Disclaimer for Snapchat Compliance */}
+      <section className="py-4 bg-primary/90">
+        <div className="container-rtl">
+          <p className="text-xs text-primary-foreground/60 text-center max-w-4xl mx-auto">
+            جميع الخدمات المقدمة تخضع للأنظمة المعتمدة في المملكة العربية السعودية، وتُنفذ بموجب عقود رسمية موثقة، 
+            وتخضع للدراسة الائتمانية والتقييم العقاري، ولا يُعد أي محتوى أو عرض التزامًا بالتمويل أو الموافقة النهائية.
+          </p>
+        </div>
+      </section>
     </Layout>
   );
 };

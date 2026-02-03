@@ -6,10 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Send, AlertCircle } from "lucide-react";
+import { Phone, Send, AlertCircle, MessageCircle, Shield, Clock, FileCheck } from "lucide-react";
 
 const complaintTypes = [
   { value: "service", label: "شكوى على خدمة" },
@@ -18,6 +19,24 @@ const complaintTypes = [
   { value: "communication", label: "مشكلة في التواصل" },
   { value: "suggestion", label: "اقتراح تحسين" },
   { value: "other", label: "أخرى" },
+];
+
+const commitments = [
+  {
+    icon: Clock,
+    title: "رد سريع",
+    description: "الرد خلال 5 أيام عمل",
+  },
+  {
+    icon: Shield,
+    title: "سرية تامة",
+    description: "حماية معلوماتك",
+  },
+  {
+    icon: FileCheck,
+    title: "متابعة مستمرة",
+    description: "إشعارك بمراحل المعالجة",
+  },
 ];
 
 const Complaints = () => {
@@ -76,6 +95,23 @@ ${formData.details}
         variant="service"
       />
 
+      {/* Commitments Bar */}
+      <section className="py-6 bg-primary text-primary-foreground">
+        <div className="container-rtl">
+          <div className="grid grid-cols-3 gap-6">
+            {commitments.map((item) => (
+              <div key={item.title} className="flex items-center gap-3 justify-center">
+                <item.icon className="w-6 h-6 text-gold" />
+                <div>
+                  <p className="font-bold text-sm">{item.title}</p>
+                  <p className="text-xs text-primary-foreground/70">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-background">
         <div className="container-rtl">
           <div className="grid lg:grid-cols-3 gap-12">
@@ -83,7 +119,8 @@ ${formData.details}
             <div className="lg:col-span-2">
               <Card>
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">نموذج الشكاوى والاقتراحات</h2>
+                  <Badge className="mb-4 bg-primary/10 text-primary">نموذج الشكاوى</Badge>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">شاركنا ملاحظاتك</h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -170,7 +207,10 @@ ${formData.details}
                         onCheckedChange={(checked) => setFormData({ ...formData, agreed: checked as boolean })}
                       />
                       <Label htmlFor="agreed" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                        أقر بأن المعلومات المقدمة صحيحة وأوافق على سياسة الخصوصية والشروط والأحكام
+                        أقر بأن المعلومات المقدمة صحيحة وأوافق على{" "}
+                        <a href="/legal/privacy" className="text-primary hover:underline">سياسة الخصوصية</a>
+                        {" "}و{" "}
+                        <a href="/legal/terms" className="text-primary hover:underline">الشروط والأحكام</a>
                       </Label>
                     </div>
 
@@ -201,16 +241,28 @@ ${formData.details}
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold text-foreground mb-4">تواصل مباشر</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    للحالات العاجلة، يمكنك التواصل مباشرة مع مسؤول الشكاوى:
+                    للحالات العاجلة، يمكنك التواصل مباشرة:
                   </p>
                   <a
                     href="tel:+966530311224"
-                    className="flex items-center gap-3 p-4 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+                    className="flex items-center gap-3 p-4 rounded-lg bg-muted hover:bg-muted/80 transition-colors mb-3"
                   >
                     <Phone className="w-5 h-5 text-gold" />
                     <div>
                       <p className="font-medium text-foreground">مسؤول الشكاوى</p>
                       <p className="text-sm text-muted-foreground" dir="ltr">+966 53 031 1224</p>
+                    </div>
+                  </a>
+                  <a
+                    href={`https://wa.me/966530311224?text=${encodeURIComponent("مرحباً، لدي شكوى/اقتراح")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-lg bg-trust/10 hover:bg-trust/20 transition-colors"
+                  >
+                    <MessageCircle className="w-5 h-5 text-trust" />
+                    <div>
+                      <p className="font-medium text-foreground">واتساب</p>
+                      <p className="text-sm text-muted-foreground">رد سريع ⚡</p>
                     </div>
                   </a>
                 </CardContent>
@@ -231,6 +283,15 @@ ${formData.details}
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-4 bg-primary/90">
+        <div className="container-rtl">
+          <p className="text-xs text-primary-foreground/60 text-center">
+            جميع الشكاوى والاقتراحات تُعالج وفقاً للأنظمة المعتمدة ونلتزم بحماية بياناتك الشخصية وفق نظام حماية البيانات (PDPL).
+          </p>
         </div>
       </section>
     </Layout>

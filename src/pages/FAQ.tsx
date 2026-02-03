@@ -2,9 +2,10 @@ import { Layout } from "@/components/layout";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { FAQSection, FAQItem } from "@/components/ui/FAQSection";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Phone, Sparkles, HelpCircle } from "lucide-react";
 
 const generalFAQs: FAQItem[] = [
   {
@@ -74,6 +75,9 @@ const legalFAQs: FAQItem[] = [
   },
 ];
 
+const whatsappMessage = encodeURIComponent("مرحباً، لدي سؤال أرغب في الاستفسار عنه");
+const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+
 const FAQ = () => {
   return (
     <Layout>
@@ -85,38 +89,58 @@ const FAQ = () => {
         variant="service"
       />
 
+      {/* Quick CTA */}
+      <section className="py-4 bg-gold sticky top-20 z-40 shadow-lg">
+        <div className="container-rtl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-gold-foreground">
+              <HelpCircle className="w-5 h-5" />
+              <span className="font-bold">لم تجد إجابتك؟</span>
+              <span className="hidden sm:inline">- تواصل معنا مباشرة</span>
+            </div>
+            <div className="flex gap-3">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="bg-trust hover:bg-trust/90 text-white gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  واتساب
+                  <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <a href="tel:+966550857533">
+                <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
+                  <Phone className="w-4 h-4" />
+                  اتصل الآن
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Sections */}
       <section className="section-padding bg-background">
         <div className="container-rtl space-y-16">
           {/* General */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8 pb-4 border-b border-border">
-              أسئلة عامة
-            </h2>
+            <Badge className="mb-4 bg-primary/10 text-primary">أسئلة عامة</Badge>
             <FAQSection items={generalFAQs} />
           </div>
 
           {/* Financing */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8 pb-4 border-b border-border">
-              التمويل العقاري
-            </h2>
+            <Badge className="mb-4 bg-gold/10 text-gold">التمويل العقاري</Badge>
             <FAQSection items={financingFAQs} />
           </div>
 
           {/* Investment */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8 pb-4 border-b border-border">
-              الاستثمار العقاري
-            </h2>
+            <Badge className="mb-4 bg-trust/10 text-trust">الاستثمار العقاري</Badge>
             <FAQSection items={investmentFAQs} />
           </div>
 
           {/* Legal */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8 pb-4 border-b border-border">
-              الأسئلة القانونية والخصوصية
-            </h2>
+            <Badge className="mb-4 bg-muted text-foreground">الأسئلة القانونية</Badge>
             <FAQSection items={legalFAQs} />
           </div>
         </div>
@@ -125,22 +149,40 @@ const FAQ = () => {
       {/* CTA */}
       <section className="section-padding bg-muted/30">
         <div className="container-rtl">
-          <Card>
+          <Card className="border-gold/20 bg-gradient-to-l from-gold/5 to-transparent">
             <CardContent className="p-8 text-center">
+              <Sparkles className="w-12 h-12 text-gold mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-foreground mb-4">
                 لم تجد إجابة لسؤالك؟
               </h2>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
                 فريقنا المتخصص جاهز للإجابة على جميع استفساراتك. تواصل معنا الآن وسنرد عليك في أقرب وقت.
               </p>
-              <Link to="/contact">
-                <Button className="btn-gold">
-                  <MessageCircle className="w-5 h-5 ml-2" />
-                  تواصل معنا
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-trust hover:bg-trust/90 text-white gap-2">
+                    <MessageCircle className="w-5 h-5" />
+                    تواصل عبر واتساب
+                    <span className="animate-pulse">⚡</span>
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="outline">
+                    صفحة التواصل
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-4 bg-primary/90">
+        <div className="container-rtl">
+          <p className="text-xs text-primary-foreground/60 text-center">
+            جميع الخدمات المقدمة تخضع للدراسة والموافقة وفقاً للأنظمة المعتمدة ولا يُعد أي محتوى التزامًا بالتمويل أو الموافقة النهائية.
+          </p>
         </div>
       </section>
     </Layout>
