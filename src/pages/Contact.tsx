@@ -2,12 +2,17 @@ import { Layout } from "@/components/layout";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { 
   Phone, 
   Mail, 
   MapPin, 
   Clock,
-  MessageCircle
+  MessageCircle,
+  Sparkles,
+  Shield,
+  CheckCircle
 } from "lucide-react";
 
 const contactInfo = [
@@ -23,7 +28,7 @@ const contactInfo = [
     title: "واتساب",
     value: "+966 55 085 7533",
     href: "https://wa.me/966550857533",
-    description: "تواصل سريع عبر واتساب",
+    description: "رد سريع خلال دقائق ⚡",
   },
   {
     icon: Mail,
@@ -40,6 +45,9 @@ const contactInfo = [
   },
 ];
 
+const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
+const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+
 const Contact = () => {
   return (
     <Layout>
@@ -50,6 +58,34 @@ const Contact = () => {
         showTrustBadges={false}
         variant="service"
       />
+
+      {/* Quick CTA Bar */}
+      <section className="py-4 bg-gold sticky top-20 z-40 shadow-lg">
+        <div className="container-rtl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-gold-foreground">
+              <Sparkles className="w-5 h-5" />
+              <span className="font-bold">استشارة مجانية</span>
+              <span className="hidden sm:inline">- تواصل الآن واحصل على استشارة عقارية</span>
+            </div>
+            <div className="flex gap-3">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="bg-trust hover:bg-trust/90 text-white gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  واتساب
+                  <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <a href="tel:+966550857533">
+                <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
+                  <Phone className="w-4 h-4" />
+                  اتصل الآن
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Info Cards */}
       <section className="section-padding bg-background">
@@ -84,7 +120,24 @@ const Contact = () => {
           {/* Contact Form & Map */}
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">أرسل لنا رسالة</h2>
+              <Badge className="mb-4 bg-gold/10 text-gold">تواصل معنا</Badge>
+              <h2 className="text-2xl font-bold text-foreground mb-4">أرسل لنا رسالة</h2>
+              <p className="text-muted-foreground mb-6">
+                املأ النموذج التالي وسيتواصل معك أحد مستشارينا في أقرب وقت ممكن.
+              </p>
+              
+              {/* Trust indicators */}
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Shield className="w-4 h-4 text-trust" />
+                  <span>بياناتك محمية</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <CheckCircle className="w-4 h-4 text-trust" />
+                  <span>رد خلال 24 ساعة</span>
+                </div>
+              </div>
+              
               <Card>
                 <CardContent className="p-6">
                   <ContactForm />
@@ -93,8 +146,9 @@ const Contact = () => {
             </div>
 
             <div>
+              <Badge className="mb-4 bg-primary/10 text-primary">زيارتنا</Badge>
               <h2 className="text-2xl font-bold text-foreground mb-6">موقعنا</h2>
-              <Card className="overflow-hidden h-[400px] lg:h-full">
+              <Card className="overflow-hidden h-[400px] lg:h-[calc(100%-120px)]">
                 <div className="w-full h-full min-h-[400px]">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.0000000000005!2d46.6753!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDAnMzEuMSJF!5e0!3m2!1sar!2ssa!4v1700000000000!5m2!1sar!2ssa"
@@ -127,6 +181,15 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-4 bg-primary/90">
+        <div className="container-rtl">
+          <p className="text-xs text-primary-foreground/60 text-center">
+            جميع الخدمات المقدمة تخضع للأنظمة المعتمدة في المملكة العربية السعودية ولا يُعد أي محتوى التزامًا بالتمويل أو الموافقة النهائية.
+          </p>
         </div>
       </section>
     </Layout>

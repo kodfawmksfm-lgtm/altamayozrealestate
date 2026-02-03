@@ -2,16 +2,18 @@ import { Layout } from "@/components/layout";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { 
   Target, 
   Eye, 
-  Heart, 
   Building2,
   Users,
   Award,
-  Clock,
   Shield,
-  CheckCircle
+  CheckCircle,
+  MessageCircle,
+  Phone,
+  Sparkles
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -20,7 +22,7 @@ const values = [
   {
     icon: Shield,
     title: "الأمانة والشفافية",
-    description: "نلتزم بأعلى معايير الشفافية في جميع تعاملاتنا، ونقدم معلومات واضحة ودقيقة لعملائنا",
+    description: "نلتزم بأعلى معايير الشفافية في جميع تعاملاتنا، ونقدم معلومات واضحة ودقيقة",
   },
   {
     icon: Award,
@@ -46,6 +48,16 @@ const milestones = [
   { year: "2024", title: "ريادة السوق", description: "أصبحنا من الشركات الرائدة في الرياض" },
 ];
 
+const stats = [
+  { value: "+500", label: "عميل راضٍ" },
+  { value: "+10", label: "سنوات خبرة" },
+  { value: "100%", label: "شفافية" },
+  { value: "6", label: "خدمات متكاملة" },
+];
+
+const whatsappMessage = encodeURIComponent("مرحباً، أرغب في معرفة المزيد عن خدماتكم");
+const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+
 const About = () => {
   return (
     <Layout>
@@ -57,6 +69,48 @@ const About = () => {
         showTrustBadges={false}
         variant="service"
       />
+
+      {/* Quick CTA Bar */}
+      <section className="py-4 bg-gold sticky top-20 z-40 shadow-lg">
+        <div className="container-rtl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-gold-foreground">
+              <Sparkles className="w-5 h-5" />
+              <span className="font-bold">استشارة مجانية</span>
+              <span className="hidden sm:inline">- تعرف على خدماتنا المتكاملة</span>
+            </div>
+            <div className="flex gap-3">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="bg-trust hover:bg-trust/90 text-white gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  واتساب
+                  <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <a href="tel:+966550857533">
+                <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
+                  <Phone className="w-4 h-4" />
+                  اتصل الآن
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-12 bg-primary text-primary-foreground">
+        <div className="container-rtl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-gold mb-1">{stat.value}</div>
+                <div className="text-sm text-primary-foreground/70">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Vision & Mission */}
       <section className="section-padding bg-background">
@@ -97,9 +151,7 @@ const About = () => {
         <div className="container-rtl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                قصتنا
-              </span>
+              <Badge className="mb-4 bg-primary/10 text-primary">قصتنا</Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 رحلة من الخبرة والتميز
               </h2>
@@ -118,7 +170,7 @@ const About = () => {
             </div>
 
             <div className="space-y-4">
-              {milestones.map((milestone, index) => (
+              {milestones.map((milestone) => (
                 <div key={milestone.year} className="flex gap-4 items-start">
                   <div className="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center shrink-0">
                     <span className="text-gold-foreground font-bold">{milestone.year}</span>
@@ -138,9 +190,7 @@ const About = () => {
       <section className="section-padding bg-background">
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block bg-trust/10 text-trust px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              قيمنا
-            </span>
+            <Badge className="mb-4 bg-trust/10 text-trust">قيمنا</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               القيم التي تقودنا
             </h2>
@@ -180,20 +230,42 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding gradient-primary text-center">
+      {/* Final CTA */}
+      <section className="py-12 bg-gold">
         <div className="container-rtl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            هل أنت مستعد للبدء؟
-          </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية من فريقنا المتخصص
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-right">
+              <h3 className="text-2xl font-bold text-gold-foreground mb-2">
+                هل أنت مستعد للبدء؟
+              </h3>
+              <p className="text-gold-foreground/80">
+                تواصل معنا اليوم واحصل على استشارة مجانية
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-trust hover:bg-trust/90 text-white gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  واتساب
+                  <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
+                  تواصل معنا
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-4 bg-primary/90">
+        <div className="container-rtl">
+          <p className="text-xs text-primary-foreground/60 text-center">
+            جميع الخدمات المقدمة تخضع للأنظمة المعتمدة في المملكة العربية السعودية ولا يُعد أي محتوى التزامًا بالتمويل أو الموافقة النهائية.
           </p>
-          <Link to="/contact">
-            <Button className="btn-gold text-lg px-8 py-6">
-              تواصل معنا الآن
-            </Button>
-          </Link>
         </div>
       </section>
     </Layout>
