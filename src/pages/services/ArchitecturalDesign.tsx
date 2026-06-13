@@ -119,7 +119,7 @@ const faqItems = [
 
 export default function ArchitecturalDesign() {
   const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدمات التصميم والترميم");
-  const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
 
   return (
     <Layout>
@@ -129,7 +129,7 @@ export default function ArchitecturalDesign() {
         description="نقدم خدمات تصميم معماري وداخلي متكاملة، مع فريق من المهندسين والمصممين المحترفين لتحويل رؤيتك إلى واقع يلبي تطلعاتك."
         image={serviceImage}
         primaryCTA={{ text: "احصل على استشارة مجانية", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966550857533" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966551535955" }}
         variant="service"
       />
 
@@ -150,7 +150,7 @@ export default function ArchitecturalDesign() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -386,7 +386,7 @@ export default function ArchitecturalDesign() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

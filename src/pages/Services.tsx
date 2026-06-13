@@ -66,7 +66,7 @@ const services = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
 
 const Services = () => {
   return (
@@ -97,7 +97,7 @@ const Services = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -165,7 +165,7 @@ const Services = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

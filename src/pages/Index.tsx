@@ -85,7 +85,7 @@ const testimonials = [
   {
     name: "أحمد السعود",
     role: "رجل أعمال",
-    content: "تجربة ممتازة مع شركة عالم التميز. إجراءات سريعة وشفافية تامة في التعامل.",
+    content: "تجربة ممتازة مع شركة خطوة الثروة. إجراءات سريعة وشفافية تامة في التعامل.",
     rating: 5,
   },
   {
@@ -104,7 +104,7 @@ const testimonials = [
 
 const generalFAQs: FAQItem[] = [
   {
-    question: "ما هي الخدمات التي تقدمها شركة عالم التميز للعقارات؟",
+    question: "ما هي الخدمات التي تقدمها شركة خطوة الثروة للعقارات؟",
     answer: "نقدم حلولاً عقارية متكاملة تشمل: التمويل العقاري (تحويل القرض إلى كاش)، التطوير العقاري والبناء الذاتي، الاستثمار العقاري، توفير العقارات الجاهزة، خدمات التصميم والترميم، والتسويق العقاري الحصري. جميع خدماتنا تخضع للأنظمة السعودية المعتمدة.",
   },
   {
@@ -122,7 +122,7 @@ const generalFAQs: FAQItem[] = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
 
 const Index = () => {
   return (
@@ -130,11 +130,11 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection
         title="حلول عقارية متكاملة تصنع الفرق"
-        subtitle="شركة عالم التميز للعقارات"
+        subtitle="شركة خطوة الثروة للعقارات"
         description="نقدم خدمات عقارية احترافية متوافقة مع الأنظمة السعودية. من التمويل العقاري إلى التطوير والاستثمار، نحن شريكك الموثوق في رحلتك العقارية."
         image={heroImage}
         primaryCTA={{ text: "استكشف خدماتنا", href: "/services" }}
-        secondaryCTA={{ text: "اتصل الآن", href: "tel:+966550857533" }}
+        secondaryCTA={{ text: "اتصل الآن", href: "tel:+966551535955" }}
       />
 
       {/* Quick Action Bar */}
@@ -154,7 +154,7 @@ const Index = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -345,8 +345,8 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-bold text-foreground">اتصال مباشر</div>
-                    <a href="tel:+966550857533" dir="ltr" className="text-muted-foreground hover:text-gold">
-                      +966 55 085 7533
+                    <a href="tel:+966551535955" dir="ltr" className="text-muted-foreground hover:text-gold">
+                      +966 55 153 5955
                     </a>
                   </div>
                 </div>
@@ -387,7 +387,7 @@ const Index = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

@@ -60,7 +60,7 @@ ${formData.message ? `الرسالة: ${formData.message}` : ""}
 أقر بأنني اطلعت على الشروط والأحكام وأوافق عليها.
     `.trim();
 
-    const whatsappUrl = `https://wa.me/966550857533?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/966551535955?text=${encodeURIComponent(message)}`;
     
     // Open WhatsApp in new tab
     window.open(whatsappUrl, "_blank");
@@ -166,7 +166,7 @@ ${formData.message ? `الرسالة: ${formData.message}` : ""}
             variant="outline"
             className="flex-1"
             onClick={() => {
-              const mailtoUrl = `mailto:alm312464@gmail.com?subject=استفسار عن ${services.find(s => s.value === formData.service)?.label || "الخدمات"}&body=${encodeURIComponent(`الاسم: ${formData.name}\nرقم الجوال: ${formData.phone}\n\n${formData.message}`)}`;
+              const mailtoUrl = `mailto:majeedceo@thewealthstep.com?subject=استفسار عن ${services.find(s => s.value === formData.service)?.label || "الخدمات"}&body=${encodeURIComponent(`الاسم: ${formData.name}\nرقم الجوال: ${formData.phone}\n\n${formData.message}`)}`;
               window.location.href = mailtoUrl;
             }}
           >

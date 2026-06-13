@@ -47,7 +47,7 @@ export function Header() {
               <Building2 className="w-7 h-7 text-primary-foreground" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground leading-tight">عالم التميز</h1>
+              <h1 className="text-lg font-bold text-foreground leading-tight">خطوة الثروة</h1>
               <p className="text-xs text-muted-foreground">للعقارات</p>
             </div>
           </Link>
@@ -104,11 +104,11 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+966550857533"
+              href="tel:+966551535955"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="hidden xl:inline" dir="ltr">055 085 7533</span>
+              <span className="hidden xl:inline" dir="ltr">055 153 5955</span>
             </a>
             <Link to="/contact">
               <Button className="btn-gold">
@@ -189,11 +189,11 @@ export function Header() {
               ))}
               <div className="pt-4 mt-2 border-t border-border space-y-3">
                 <a
-                  href="tel:+966550857533"
+                  href="tel:+966551535955"
                   className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-muted text-foreground font-medium"
                 >
                   <Phone className="w-5 h-5" />
-                  <span dir="ltr">055 085 7533</span>
+                  <span dir="ltr">055 153 5955</span>
                 </a>
                 <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
                   <Button className="btn-gold w-full">

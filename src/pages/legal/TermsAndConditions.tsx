@@ -16,14 +16,14 @@ export default function TermsAndConditions() {
             
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. مقدمة</h2>
             <p className="text-muted-foreground mb-4">
-              مرحباً بكم في الموقع الإلكتروني لشركة عالم التميز للعقارات. باستخدامك لهذا الموقع، 
+              مرحباً بكم في الموقع الإلكتروني لشركة خطوة الثروة للعقارات. باستخدامك لهذا الموقع، 
               فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، 
               يرجى عدم استخدام الموقع.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">2. تعريفات</h2>
             <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
-              <li><strong>"الشركة"</strong> تشير إلى شركة عالم التميز للعقارات.</li>
+              <li><strong>"الشركة"</strong> تشير إلى شركة خطوة الثروة للعقارات.</li>
               <li><strong>"الموقع"</strong> يشير إلى هذا الموقع الإلكتروني وجميع صفحاته.</li>
               <li><strong>"المستخدم"</strong> يشير إلى أي شخص يستخدم الموقع أو خدماته.</li>
               <li><strong>"الخدمات"</strong> تشير إلى جميع الخدمات العقارية والتمويلية التي تقدمها الشركة.</li>
@@ -108,7 +108,7 @@ export default function TermsAndConditions() {
               لأي استفسارات حول هذه الشروط والأحكام، يرجى التواصل معنا عبر:
             </p>
             <ul className="list-none text-muted-foreground mb-4 space-y-2">
-              <li>الهاتف: +966 55 085 7533</li>
+              <li>الهاتف: +966 55 153 5955</li>
               <li>العنوان: 3061 – 8091 شارع بحر العرب – حي الخليج – الرياض 13224</li>
             </ul>
 

@@ -32,7 +32,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-  const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -80,7 +80,7 @@ export function Footer() {
                 <Building2 className="w-7 h-7 text-gold-foreground" />
               </div>
               <div>
-                <h3 className="text-lg font-bold leading-tight">عالم التميز</h3>
+                <h3 className="text-lg font-bold leading-tight">خطوة الثروة</h3>
                 <p className="text-xs text-primary-foreground/70">للعقارات</p>
               </div>
             </Link>
@@ -98,14 +98,14 @@ export function Footer() {
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a
-                href="tel:+966550857533"
+                href="tel:+966551535955"
                 className="w-10 h-10 bg-gold rounded-lg flex items-center justify-center hover:bg-gold/80 transition-colors"
                 aria-label="اتصل بنا"
               >
                 <Phone className="w-5 h-5 text-gold-foreground" />
               </a>
               <a
-                href="mailto:alm312464@gmail.com"
+                href="mailto:majeedceo@thewealthstep.com"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
                 aria-label="راسلنا بالبريد"
               >
@@ -171,20 +171,20 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold shrink-0" />
                 <a
-                  href="tel:+966550857533"
+                  href="tel:+966551535955"
                   className="text-primary-foreground/80 hover:text-gold transition-colors text-sm"
                   dir="ltr"
                 >
-                  +966 55 085 7533
+                  +966 55 153 5955
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold shrink-0" />
                 <a
-                  href="mailto:alm312464@gmail.com"
+                  href="mailto:majeedceo@thewealthstep.com"
                   className="text-primary-foreground/80 hover:text-gold transition-colors text-sm"
                 >
-                  alm312464@gmail.com
+                  majeedceo@thewealthstep.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -213,7 +213,7 @@ export function Footer() {
         <div className="container-rtl py-4">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <p className="text-xs text-primary-foreground/60">
-              © {currentYear} شركة عالم التميز للعقارات. جميع الحقوق محفوظة.
+              © {currentYear} شركة خطوة الثروة للعقارات. جميع الحقوق محفوظة.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {legalLinks.map((link, index) => (
