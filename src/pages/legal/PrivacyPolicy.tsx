@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
             
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. مقدمة</h2>
             <p className="text-muted-foreground mb-4">
-              تلتزم شركة عالم التميز للعقارات بحماية خصوصية بياناتك الشخصية وفقاً لنظام حماية 
+              تلتزم شركة خطوة الثروة للعقارات بحماية خصوصية بياناتك الشخصية وفقاً لنظام حماية 
               البيانات الشخصية (PDPL) في المملكة العربية السعودية. توضح هذه السياسة كيفية جمع 
               واستخدام وحماية بياناتك.
             </p>
@@ -106,7 +106,7 @@ export default function PrivacyPolicy() {
               لممارسة حقوقك أو الاستفسار عن هذه السياسة:
             </p>
             <ul className="list-none text-muted-foreground mb-4 space-y-2">
-              <li>الهاتف: +966 55 085 7533</li>
+              <li>الهاتف: +966 55 153 5955</li>
               <li>مسؤول الشكاوى: +966 53 031 1224</li>
               <li>العنوان: 3061 – 8091 شارع بحر العرب – حي الخليج – الرياض 13224</li>
             </ul>

@@ -1,291 +1,303 @@
 import { Layout } from "@/components/layout";
-import { HeroSection } from "@/components/ui/HeroSection";
-import { ServiceCard } from "@/components/ui/ServiceCard";
-import { TrustBadges } from "@/components/ui/TrustBadges";
-import { FAQSection, FAQItem } from "@/components/ui/FAQSection";
-import { ContactForm } from "@/components/ui/ContactForm";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Banknote, 
-  Building2, 
-  TrendingUp, 
-  Home, 
-  Paintbrush, 
-  Megaphone,
-  ArrowLeft,
-  CheckCircle,
-  Users,
-  Award,
-  Clock,
-  Star,
-  MessageCircle,
-  Phone,
-  Sparkles,
-  Shield,
-  Target
-} from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import {
+  ShieldCheck, Award, Users, TrendingUp, MessageCircle, Phone, ArrowLeft,
+  Building2, Home, Briefcase, BarChart3, Hammer, Megaphone, FileSearch,
+  CheckCircle2, Star, Sparkles, ClipboardList, FileCheck, Eye, FileSignature, Repeat,
+} from "lucide-react";
+import heroImg from "@/assets/hero-skyline.jpg";
 
-import heroImage from "@/assets/hero-main.png";
-import service1 from "@/assets/financing.png";
-import service2 from "@/assets/service-development.png";
+const whatsapp = `https://wa.me/966551535955?text=${encodeURIComponent("مرحباً، أرغب باستشارة عقارية مجانية من خطوة الثروة")}`;
 
 const services = [
-  {
-    title: "تمويل عقاري كاش",
-    description: "تحويل قرضك العقاري إلى سيولة نقدية بإجراءات نظامية وموثقة",
-    icon: Banknote,
-    href: "/services/cash-financing",
-    image: service1,
-    featured: true,
-  },
-  {
-    title: "تطوير عقاري",
-    description: "خدمات البناء الذاتي والتطوير العقاري المتكامل",
-    icon: Building2,
-    href: "/services/development",
-    image: service2,
-  },
-  {
-    title: "استثمار عقاري",
-    description: "فرص استثمارية مدروسة في القطاع العقاري السعودي",
-    icon: TrendingUp,
-    href: "/services/investment",
-  },
-  {
-    title: "عقارات جاهزة",
-    description: "توفير عقارات جاهزة للتملك بمواصفات عالية",
-    icon: Home,
-    href: "/services/ready-properties",
-  },
-  {
-    title: "تصميم وترميم",
-    description: "خدمات التصميم المعماري والترميم الاحترافي",
-    icon: Paintbrush,
-    href: "/services/design",
-  },
-  {
-    title: "تسويق حصري",
-    description: "خدمات تسويق عقاري متخصصة ومستهدفة",
-    icon: Megaphone,
-    href: "/services/marketing",
-  },
+  { icon: Home, title: "خدمات الوساطة العقارية", desc: "ربط البائع بالمشتري بشفافية كاملة، توثيق العقود، ومتابعة الإجراءات حتى نقل الملكية.", href: "/services/ready-properties" },
+  { icon: Megaphone, title: "خدمات التسويق العقاري", desc: "حملات تسويقية احترافية للمشاريع والوحدات العقارية، استهداف دقيق، ونتائج قابلة للقياس.", href: "/services/marketing" },
+  { icon: Briefcase, title: "الاستشارات العقارية", desc: "دراسة احتياجاتك وتقديم خيارات عقارية وتمويلية تناسب وضعك المالي وأهدافك.", href: "/services/cash-financing" },
+  { icon: Hammer, title: "برامج البناء الذاتي", desc: "مرافقة كاملة من اختيار الأرض إلى التصميم والتنفيذ ضمن الميزانية المخططة.", href: "/services/development" },
+  { icon: BarChart3, title: "الحلول الاستثمارية العقارية", desc: "هيكلة محافظ عقارية متوازنة بدراسات جدوى مفصلة وإدارة مخاطر احترافية.", href: "/services/investment" },
+  { icon: FileSearch, title: "تحليل الفرص العقارية", desc: "تقييم متعمق للفرص في السوق السعودي مع توصيات قائمة على بيانات دقيقة.", href: "/services/design" },
 ];
 
-const stats = [
-  { value: "+500", label: "عميل راضٍ", icon: Users },
-  { value: "+10", label: "سنوات خبرة", icon: Award },
-  { value: "100%", label: "شفافية", icon: Shield },
-  { value: "24/7", label: "دعم متواصل", icon: Clock },
+const whyUs = [
+  { icon: ShieldCheck, title: "شركة مرخصة", desc: "رخصة فال 1200048456 وسجل تجاري موثق" },
+  { icon: Award, title: "خبرة متخصصة", desc: "في إدارة الأصول والاستثمار العقاري" },
+  { icon: FileCheck, title: "التزام نظامي", desc: "توافق كامل مع أنظمة المملكة المعتمدة" },
+  { icon: Users, title: "متابعة احترافية", desc: "فريق مرافق لك في كل خطوة" },
+  { icon: TrendingUp, title: "حلول مخصصة", desc: "مصممة وفق أهدافك ووضعك المالي" },
+  { icon: Eye, title: "شفافية كاملة", desc: "إفصاح واضح في كل التفاصيل والشروط" },
+];
+
+const steps = [
+  { icon: ClipboardList, t: "تقديم الطلب", d: "املأ النموذج أو تواصل عبر واتساب" },
+  { icon: FileSearch, t: "دراسة الحالة", d: "تحليل احتياجاتك ووضعك المالي" },
+  { icon: Eye, t: "مراجعة الخيارات", d: "نعرض الخيارات الأنسب لك بشفافية" },
+  { icon: FileSignature, t: "استكمال الإجراءات", d: "توثيق العقود وإكمال المعاملات" },
+  { icon: Repeat, t: "المتابعة والتنفيذ", d: "مرافقة مستمرة حتى تحقيق الهدف" },
+];
+
+const values = [
+  { t: "الشفافية", d: "إفصاح كامل في كل تفصيلة" },
+  { t: "المصداقية", d: "ما نَعِد به نلتزم به" },
+  { t: "الاحترافية", d: "معايير عمل عالية ومدروسة" },
+  { t: "الامتثال التنظيمي", d: "التزام بكل أنظمة المملكة" },
+  { t: "خدمة العميل", d: "العميل في قلب كل قرار" },
 ];
 
 const testimonials = [
-  {
-    name: "أحمد السعود",
-    role: "رجل أعمال",
-    content: "تجربة ممتازة مع شركة عالم التميز. إجراءات سريعة وشفافية تامة في التعامل.",
-    rating: 5,
-  },
-  {
-    name: "محمد الراشد",
-    role: "موظف حكومي",
-    content: "خدمة احترافية من البداية حتى النهاية. أنصح بالتعامل معهم بشدة.",
-    rating: 5,
-  },
-  {
-    name: "عبدالله المطيري",
-    role: "مستثمر عقاري",
-    content: "فريق متخصص ومحترف. ساعدوني في إتمام صفقات عقارية ناجحة.",
-    rating: 5,
-  },
+  { name: "محمد ع.", role: "عميل تمويل", text: "تجربة احترافية من البداية للنهاية. شرحوا لي كل الخيارات بوضوح واخترت ما يناسبني فعلاً." },
+  { name: "نورة س.", role: "مستثمرة", text: "ساعدوني في بناء محفظة عقارية بدراسة جدوى دقيقة. شفافية تامة وفريق متعاون." },
+  { name: "عبدالله م.", role: "صاحب أرض", text: "خدمة التسويق نقلت مشروعي لمستوى آخر. حملة احترافية ونتائج ملموسة خلال أسابيع." },
 ];
-
-const generalFAQs: FAQItem[] = [
-  {
-    question: "ما هي الخدمات التي تقدمها شركة عالم التميز للعقارات؟",
-    answer: "نقدم حلولاً عقارية متكاملة تشمل: التمويل العقاري (تحويل القرض إلى كاش)، التطوير العقاري والبناء الذاتي، الاستثمار العقاري، توفير العقارات الجاهزة، خدمات التصميم والترميم، والتسويق العقاري الحصري. جميع خدماتنا تخضع للأنظمة السعودية المعتمدة.",
-  },
-  {
-    question: "هل خدماتكم متوافقة مع الأنظمة السعودية؟",
-    answer: "نعم، جميع خدماتنا متوافقة تماماً مع أنظمة البنك المركزي السعودي (ساما) وهيئة السوق المالية، وتُنفذ بموجب عقود رسمية موثقة. نلتزم بأعلى معايير الشفافية والامتثال القانوني.",
-  },
-  {
-    question: "كيف يمكنني التواصل معكم للحصول على استشارة؟",
-    answer: "يمكنك التواصل معنا عبر واتساب على الرقم 0550857533، أو زيارة مقرنا في حي الخليج بالرياض، أو تعبئة نموذج الاتصال في موقعنا. فريقنا متاح للرد على استفساراتك خلال أوقات العمل من السبت إلى الخميس.",
-  },
-  {
-    question: "هل يوجد ضمان للموافقة على طلبات التمويل؟",
-    answer: "جميع طلبات التمويل تخضع للدراسة الائتمانية والتقييم العقاري وفقاً للأنظمة المعتمدة. لا نضمن الموافقة المسبقة، لكننا نعمل على تقديم أفضل الحلول الممكنة وفقاً لوضع كل عميل.",
-  },
-];
-
-const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
 
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <HeroSection
-        title="حلول عقارية متكاملة تصنع الفرق"
-        subtitle="شركة عالم التميز للعقارات"
-        description="نقدم خدمات عقارية احترافية متوافقة مع الأنظمة السعودية. من التمويل العقاري إلى التطوير والاستثمار، نحن شريكك الموثوق في رحلتك العقارية."
-        image={heroImage}
-        primaryCTA={{ text: "استكشف خدماتنا", href: "/services" }}
-        secondaryCTA={{ text: "اتصل الآن", href: "tel:+966550857533" }}
-      />
-
-      {/* Quick Action Bar */}
-      <section className="py-4 bg-gold sticky top-20 z-40 shadow-lg">
-        <div className="container-rtl">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-gold-foreground">
-              <Sparkles className="w-5 h-5" />
-              <span className="font-bold">استشارة مجانية</span>
-              <span className="hidden sm:inline">- تواصل الآن واحصل على استشارة عقارية مجانية</span>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroImg} alt="" width={1920} height={1080} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-l from-secondary/95 via-secondary/85 to-secondary/70" />
+        </div>
+        <div className="relative container-rtl py-20 md:py-28 lg:py-36">
+          <div className="max-w-3xl">
+            <Badge className="mb-5 bg-gold/20 text-gold border-gold/30 hover:bg-gold/25">
+              <Sparkles className="w-3.5 h-3.5 ml-1" /> شركة سعودية مرخصة
+            </Badge>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
+              حلول عقارية واستشارية متكاملة
+              <span className="block text-gold mt-2">وفق الأنظمة السعودية</span>
+            </h1>
+            <p className="text-base md:text-lg text-white/85 leading-relaxed mb-8 max-w-2xl">
+              نساعدك على استكشاف الخيارات العقارية والتمويلية المناسبة لأهدافك السكنية والاستثمارية،
+              من خلال خدمات احترافية قائمة على الخبرة والشفافية والالتزام التنظيمي.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a href={whatsapp} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground gap-2 font-bold">
+                  <MessageCircle className="w-5 h-5" /> احجز استشارة مجانية <span className="animate-pulse">⚡</span>
+                </Button>
+              </a>
+              <Link to="/financing-request">
+                <Button size="lg" variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-secondary gap-2">
+                  قدّم طلب تمويل <ArrowLeft className="w-4 h-4" />
+                </Button>
+              </Link>
             </div>
-            <div className="flex gap-3">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="bg-trust hover:bg-trust/90 text-white gap-2">
-                  <MessageCircle className="w-4 h-4" />
-                  واتساب
-                  <span className="animate-pulse">⚡</span>
-                </Button>
-              </a>
-              <a href="tel:+966550857533">
-                <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
-                  <Phone className="w-4 h-4" />
-                  اتصل الآن
-                </Button>
-              </a>
+            <div className="grid grid-cols-3 gap-4 mt-10 max-w-xl">
+              {[
+                { n: "+500", l: "عميل سعيد" },
+                { n: "+10", l: "سنوات خبرة" },
+                { n: "100%", l: "شفافية" },
+              ].map((s) => (
+                <div key={s.l} className="text-center md:text-right">
+                  <div className="text-2xl md:text-3xl font-bold text-gold">{s.n}</div>
+                  <div className="text-xs md:text-sm text-white/70">{s.l}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-primary text-primary-foreground">
+      {/* Sticky CTA bar */}
+      <section className="py-3 bg-gold sticky top-20 z-40 shadow-md">
+        <div className="container-rtl flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-gold-foreground text-sm font-medium">
+            <Sparkles className="w-4 h-4" />
+            <span>استشارة عقارية مجانية الآن</span>
+            <span className="animate-pulse">⚡</span>
+          </div>
+          <div className="flex gap-2">
+            <a href={whatsapp} target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-1.5">
+                <MessageCircle className="w-4 h-4" /> واتساب
+              </Button>
+            </a>
+            <a href="tel:+966551535955">
+              <Button size="sm" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent gap-1.5">
+                <Phone className="w-4 h-4" /> اتصل الآن
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About / Vision-Mission */}
+      <section className="section-padding bg-background">
         <div className="container-rtl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gold/20 mb-4">
-                  <stat.icon className="w-7 h-7 text-gold" />
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <Badge className="mb-4 bg-accent text-secondary">من نحن</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">شركة خطوة الثروة للعقارات</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              تأسست شركة خطوة الثروة للعقارات انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
+              يمثلان حجر الأساس لبناء الأصول وتحقيق الاستقرار المالي على المدى الطويل.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <Card className="border-2 border-gold/20 card-hover">
+              <CardContent className="p-7">
+                <div className="w-12 h-12 rounded-md bg-gold/10 flex items-center justify-center mb-4">
+                  <Eye className="w-6 h-6 text-gold" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-gold mb-1">{stat.value}</div>
-                <div className="text-sm text-primary-foreground/70">{stat.label}</div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">رؤيتنا</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  أن نكون من الشركات الرائدة في تقديم الحلول العقارية والاستشارية المتكاملة في المملكة العربية السعودية.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-secondary/10 card-hover">
+              <CardContent className="p-7">
+                <div className="w-12 h-12 rounded-md bg-secondary/10 flex items-center justify-center mb-4">
+                  <FileSignature className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">رسالتنا</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  تمكين العملاء من الوصول إلى حلول عقارية وتمويلية مناسبة لأهدافهم السكنية والاستثمارية،
+                  من خلال خدمات احترافية قائمة على الشفافية والخبرة والالتزام.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {values.map((v) => (
+              <div key={v.t} className="text-center p-4 rounded-md bg-accent border border-border">
+                <div className="text-gold font-bold mb-1">{v.t}</div>
+                <div className="text-xs text-muted-foreground">{v.d}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services */}
+      <section className="section-padding bg-accent">
+        <div className="container-rtl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <Badge className="mb-4 bg-gold/15 text-gold border-gold/30">خدماتنا</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">خدمات عقارية متكاملة باحترافية</h2>
+            <p className="text-muted-foreground">منظومة خدمات متخصصة تغطي كل احتياجاتك العقارية والاستثمارية</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map((s) => (
+              <Link to={s.href} key={s.title} className="group">
+                <Card className="h-full card-hover border-border hover:border-gold transition-colors">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-md bg-gold/10 group-hover:bg-gold group-hover:text-gold-foreground flex items-center justify-center mb-4 transition-colors">
+                      <s.icon className="w-6 h-6 text-gold group-hover:text-gold-foreground" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-2 text-foreground">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">{s.desc}</p>
+                    <span className="text-sm font-semibold text-gold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                      اعرف المزيد <ArrowLeft className="w-4 h-4" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us */}
       <section className="section-padding bg-background">
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <Badge className="mb-4 bg-primary/10 text-primary">خدماتنا المتميزة</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              حلول عقارية شاملة لكل احتياجاتك
-            </h2>
-            <p className="text-muted-foreground">
-              نقدم مجموعة متكاملة من الخدمات العقارية المصممة لتلبية تطلعاتك، مع الالتزام التام بالأنظمة السعودية
-            </p>
+            <Badge className="mb-4 bg-secondary text-secondary-foreground">لماذا خطوة الثروة</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">ست أسباب تجعلنا خيارك الأول</h2>
+            <p className="text-muted-foreground">نتعامل بمصداقية مؤسسية وشفافية كاملة في كل خطوة</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {whyUs.map((w) => (
+              <div key={w.title} className="flex gap-4 p-5 rounded-md border border-border hover:border-gold transition-colors bg-accent/30">
+                <div className="w-11 h-11 rounded-md bg-gold/10 flex items-center justify-center shrink-0">
+                  <w.icon className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">{w.title}</h3>
+                  <p className="text-sm text-muted-foreground">{w.desc}</p>
+                </div>
+              </div>
             ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link to="/services">
-              <Button className="btn-primary">
-                عرض جميع الخدمات
-                <ArrowLeft className="w-4 h-4 mr-2" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="section-padding bg-muted/30">
+      {/* Licenses */}
+      <section className="section-padding bg-secondary text-secondary-foreground">
         <div className="container-rtl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="mb-4 bg-trust/10 text-trust">لماذا نحن؟</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                شريكك الموثوق في عالم العقارات
-              </h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                نفخر بتقديم خدمات عقارية متكاملة تجمع بين الخبرة العميقة والالتزام التام بالأنظمة السعودية. 
-                نعمل وفق أعلى معايير الشفافية والمهنية لضمان تحقيق أهدافك العقارية.
-              </p>
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <Badge className="mb-4 bg-gold/20 text-gold border-gold/30">التراخيص والاعتمادات</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">موثوقة ومرخصة رسمياً</h2>
+            <p className="text-secondary-foreground/75">نعمل تحت مظلة الأنظمة الرسمية في المملكة العربية السعودية</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              { t: "السجل التجاري", v: "7037372658", d: "الرقم الوطني الموحد" },
+              { t: "رخصة فال", v: "1200048456", d: "ترخيص الوساطة والتسويق العقاري" },
+              { t: "شهادة الزكاة والضريبة", v: "سارية", d: "متوافقة مع هيئة الزكاة والضريبة" },
+            ].map((l) => (
+              <div key={l.t} className="bg-secondary-foreground/5 border border-gold/20 rounded-md p-6 text-center backdrop-blur-sm">
+                <ShieldCheck className="w-10 h-10 text-gold mx-auto mb-3" />
+                <div className="text-sm text-secondary-foreground/70 mb-1">{l.t}</div>
+                <div className="text-xl font-bold text-gold mb-2" dir="ltr">{l.v}</div>
+                <div className="text-xs text-secondary-foreground/60">{l.d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div className="space-y-4">
-                {[
-                  "عقود رسمية موثقة وشفافة",
-                  "التزام كامل بأنظمة ساما وهيئة السوق المالية",
-                  "فريق متخصص بخبرة واسعة في السوق السعودي",
-                  "دراسة شاملة لكل طلب وحلول مخصصة",
-                  "متابعة مستمرة حتى إتمام الخدمة",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-trust shrink-0" />
-                    <span className="text-foreground">{item}</span>
+      {/* How it works */}
+      <section className="section-padding bg-background">
+        <div className="container-rtl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <Badge className="mb-4 bg-accent text-secondary">خطوات العمل</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">مسار واضح من الطلب إلى التنفيذ</h2>
+            <p className="text-muted-foreground">خمس خطوات منظمة تضمن لك تجربة احترافية وشفافة</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {steps.map((s, i) => (
+              <div key={s.t} className="text-center">
+                <div className="relative inline-block mb-3">
+                  <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto">
+                    <s.icon className="w-7 h-7 text-gold-foreground" />
                   </div>
-                ))}
+                  <span className="absolute -top-1 -left-1 w-7 h-7 rounded-full bg-secondary text-secondary-foreground text-sm font-bold flex items-center justify-center">{i + 1}</span>
+                </div>
+                <h4 className="font-bold text-foreground mb-1 text-sm md:text-base">{s.t}</h4>
+                <p className="text-xs text-muted-foreground">{s.d}</p>
               </div>
-
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-trust hover:bg-trust/90 text-white gap-2">
-                    <MessageCircle className="w-5 h-5" />
-                    تواصل عبر واتساب
-                    <span className="animate-pulse">⚡</span>
-                  </Button>
-                </a>
-                <Link to="/about">
-                  <Button variant="outline" className="group">
-                    اعرف المزيد عنا
-                    <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <TrustBadges variant="grid" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="section-padding bg-accent">
         <div className="container-rtl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">ماذا يقول عملاؤنا؟</h2>
-            <p className="text-primary-foreground/70">آراء حقيقية من عملاء استفادوا من خدماتنا</p>
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <Badge className="mb-4 bg-gold/15 text-gold border-gold/30">آراء عملائنا</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">قصص نجاح من عملائنا</h2>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-primary-foreground/10 border-primary-foreground/20">
+          <div className="grid md:grid-cols-3 gap-5">
+            {testimonials.map((t) => (
+              <Card key={t.name} className="card-hover">
                 <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                    ))}
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-gold text-gold" />)}
                   </div>
-                  <p className="text-primary-foreground mb-4 leading-relaxed">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-bold">{testimonial.name}</div>
-                    <div className="text-sm text-primary-foreground/70">{testimonial.role}</div>
+                  <p className="text-foreground/85 leading-relaxed mb-4 text-sm">«{t.text}»</p>
+                  <div className="flex items-center gap-3 pt-3 border-t border-border">
+                    <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center font-bold text-gold">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="font-bold text-foreground text-sm">{t.name}</div>
+                      <div className="text-xs text-muted-foreground">{t.role}</div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -294,116 +306,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="section-padding bg-background">
-        <div className="container-rtl">
-          <FAQSection
-            title="الأسئلة الشائعة"
-            description="إجابات على أكثر الأسئلة شيوعاً حول خدماتنا"
-            items={generalFAQs}
-          />
-          
-          <div className="text-center mt-10">
-            <Link to="/faq">
-              <Button variant="outline">
-                عرض جميع الأسئلة
-                <ArrowLeft className="w-4 h-4 mr-2" />
+      {/* Final CTA */}
+      <section className="py-14 bg-gradient-to-l from-secondary to-secondary/90 text-secondary-foreground">
+        <div className="container-rtl text-center">
+          <Sparkles className="w-10 h-10 text-gold mx-auto mb-4" />
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">خطوتك القادمة تبدأ من هنا</h2>
+          <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-7">
+            تواصل معنا الآن للحصول على استشارة عقارية مجانية من خبرائنا المعتمدين، أو قدّم طلب تمويل ونتولى دراستك بشكل احترافي.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href={whatsapp} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground gap-2 font-bold">
+                <MessageCircle className="w-5 h-5" /> تواصل عبر واتساب <span className="animate-pulse">⚡</span>
+              </Button>
+            </a>
+            <Link to="/financing-request">
+              <Button size="lg" variant="outline" className="border-gold text-gold hover:bg-gold hover:text-gold-foreground bg-transparent gap-2">
+                قدّم طلب تمويل
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="contact-form" className="section-padding bg-muted/30">
+      {/* Legal disclaimer (Snapchat/Meta compliance) */}
+      <section className="py-5 bg-background border-t border-border">
         <div className="container-rtl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="mb-4 bg-gold/10 text-gold">تواصل معنا</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                جاهز لبدء رحلتك العقارية؟
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                تواصل معنا اليوم للحصول على استشارة مجانية. فريقنا المتخصص جاهز لمساعدتك في تحقيق أهدافك العقارية.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-trust/10 flex items-center justify-center">
-                    <MessageCircle className="w-5 h-5 text-trust" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground">واتساب</div>
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-trust">
-                      رد فوري خلال دقائق ⚡
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-gold" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground">اتصال مباشر</div>
-                    <a href="tel:+966550857533" dir="ltr" className="text-muted-foreground hover:text-gold">
-                      +966 55 085 7533
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-sm text-muted-foreground">
-                جميع الخدمات تخضع للدراسة والموافقة وفقاً للأنظمة المعتمدة
-              </p>
-            </div>
-
-            <Card className="shadow-xl">
-              <CardContent className="p-6 md:p-8">
-                <h3 className="text-xl font-bold text-foreground mb-6">احصل على استشارة مجانية</h3>
-                <ContactForm variant="compact" />
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-12 bg-gold">
-        <div className="container-rtl">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-right">
-              <h3 className="text-2xl font-bold text-gold-foreground mb-2">
-                لا تتردد! تواصل معنا الآن
-              </h3>
-              <p className="text-gold-foreground/80">
-                فريقنا متاح للرد على استفساراتك على مدار الساعة
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-trust hover:bg-trust/90 text-white gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  واتساب
-                  <span className="animate-pulse">⚡</span>
-                </Button>
-              </a>
-              <a href="tel:+966550857533">
-                <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
-                  <Phone className="w-5 h-5 ml-2" />
-                  اتصل الآن
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Legal Disclaimer for Snapchat Compliance */}
-      <section className="py-4 bg-primary/90">
-        <div className="container-rtl">
-          <p className="text-xs text-primary-foreground/60 text-center max-w-4xl mx-auto">
-            جميع الخدمات المقدمة تخضع للأنظمة المعتمدة في المملكة العربية السعودية، وتُنفذ بموجب عقود رسمية موثقة، 
-            وتخضع للدراسة الائتمانية والتقييم العقاري، ولا يُعد أي محتوى أو عرض التزامًا بالتمويل أو الموافقة النهائية.
+          <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed">
+            <ShieldCheck className="w-3.5 h-3.5 inline-block ml-1 text-gold" />
+            شركة خطوة الثروة للعقارات شركة وساطة واستشارات عقارية مرخصة (رخصة فال 1200048456) ولا تُعد جهة تمويلية.
+            الموافقة على التمويل ليست مضمونة وتخضع للدراسة الائتمانية والتقييم العقاري من الجهات المختصة.
+            لا يُعد أي محتوى التزامًا بالتمويل أو ضمانًا لأي عوائد استثمارية.
           </p>
         </div>
       </section>

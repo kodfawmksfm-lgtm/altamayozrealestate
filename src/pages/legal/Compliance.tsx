@@ -41,7 +41,7 @@ export default function Compliance() {
             
             <div className="bg-trust/10 rounded-xl p-6 mb-12">
               <p className="text-foreground text-center">
-                تلتزم شركة عالم التميز للعقارات بأعلى معايير الامتثال التنظيمي، وتعمل وفقاً 
+                تلتزم شركة خطوة الثروة للعقارات بأعلى معايير الامتثال التنظيمي، وتعمل وفقاً 
                 لجميع الأنظمة واللوائح المعتمدة في المملكة العربية السعودية.
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function Compliance() {
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. التزاماتنا التنظيمية</h2>
             <p className="text-muted-foreground mb-4">
-              نلتزم في شركة عالم التميز للعقارات بـ:
+              نلتزم في شركة خطوة الثروة للعقارات بـ:
             </p>
             <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
               <li>الحصول على جميع التراخيص والتصاريح اللازمة لممارسة أنشطتنا.</li>
@@ -145,7 +145,7 @@ export default function Compliance() {
               لأي استفسارات حول سياسات الامتثال:
             </p>
             <ul className="list-none text-muted-foreground mb-4 space-y-2">
-              <li>الهاتف: +966 55 085 7533</li>
+              <li>الهاتف: +966 55 153 5955</li>
               <li>العنوان: 3061 – 8091 شارع بحر العرب – حي الخليج – الرياض 13224</li>
             </ul>
 

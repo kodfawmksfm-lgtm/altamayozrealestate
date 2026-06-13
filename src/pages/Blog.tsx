@@ -24,7 +24,7 @@ const featuredPost = {
   image: service1,
   date: "15 يناير 2024",
   readTime: "8 دقائق",
-  author: "فريق عالم التميز",
+  author: "فريق خطوة الثروة",
   slug: "complete-guide-cash-financing-2024",
 };
 
@@ -49,7 +49,7 @@ const posts = [
     image: service2,
     date: "5 يناير 2024",
     readTime: "5 دقائق",
-    author: "فريق عالم التميز",
+    author: "فريق خطوة الثروة",
     slug: "steps-buying-property",
     icon: Home,
   },

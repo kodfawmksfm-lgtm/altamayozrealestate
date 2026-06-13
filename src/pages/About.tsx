@@ -56,7 +56,7 @@ const stats = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في معرفة المزيد عن خدماتكم");
-const whatsappLink = `https://wa.me/966550857533?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
 
 const About = () => {
   return (
@@ -64,7 +64,7 @@ const About = () => {
       {/* Hero Section */}
       <HeroSection
         title="من نحن"
-        subtitle="شركة عالم التميز للعقارات"
+        subtitle="شركة خطوة الثروة للعقارات"
         description="شركة سعودية رائدة متخصصة في تقديم الحلول العقارية المتكاملة. نجمع بين الخبرة العميقة والالتزام التام بالأنظمة السعودية لنكون شريكك الموثوق في رحلتك العقارية."
         showTrustBadges={false}
         variant="service"
@@ -87,7 +87,7 @@ const About = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966550857533">
+              <a href="tel:+966551535955">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -156,7 +156,7 @@ const About = () => {
                 رحلة من الخبرة والتميز
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                بدأت شركة عالم التميز للعقارات رحلتها في سوق العقارات السعودي بهدف واضح: 
+                بدأت شركة خطوة الثروة للعقارات رحلتها في سوق العقارات السعودي بهدف واضح: 
                 تقديم خدمات عقارية استثنائية تجمع بين المهنية العالية والالتزام الكامل بالأنظمة المعتمدة.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
