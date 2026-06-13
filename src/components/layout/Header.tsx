@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Building2, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,23 +8,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logo from "@/assets/khotwah-logo.png";
 
 const services = [
-  { name: "تمويل عقاري كاش", href: "/services/cash-financing" },
-  { name: "تطوير عقاري", href: "/services/development" },
-  { name: "استثمار عقاري", href: "/services/investment" },
-  { name: "عقارات جاهزة", href: "/services/ready-properties" },
-  { name: "تصميم وترميم", href: "/services/design" },
-  { name: "تسويق حصري", href: "/services/marketing" },
+  { name: "الوساطة العقارية", href: "/services/ready-properties" },
+  { name: "التسويق العقاري", href: "/services/marketing" },
+  { name: "الاستشارات العقارية", href: "/services/cash-financing" },
+  { name: "برامج البناء الذاتي", href: "/services/development" },
+  { name: "الحلول الاستثمارية", href: "/services/investment" },
+  { name: "تحليل الفرص العقارية", href: "/services/design" },
 ];
 
 const navigation = [
   { name: "الرئيسية", href: "/" },
-  { name: "خدماتنا", href: "/services", hasDropdown: true },
-  { name: "المدونة", href: "/blog" },
   { name: "من نحن", href: "/about" },
+  { name: "خدماتنا", href: "/services", hasDropdown: true },
+  { name: "طلب تمويل", href: "/financing-request", highlight: true },
+  { name: "المدونة", href: "/blog" },
   { name: "الأسئلة الشائعة", href: "/faq" },
-  { name: "تواصل معنا", href: "/contact" },
+  { name: "تواصل", href: "/contact" },
 ];
 
 export function Header() {
@@ -38,48 +40,50 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
       <nav className="container-rtl">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-105">
-              <Building2 className="w-7 h-7 text-primary-foreground" />
-            </div>
+          <Link to="/" className="flex items-center gap-3 group" aria-label="خطوة الثروة للعقارات">
+            <img
+              src={logo}
+              alt="شعار خطوة الثروة للعقارات"
+              width={56}
+              height={56}
+              className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-105"
+            />
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground leading-tight">خطوة الثروة</h1>
-              <p className="text-xs text-muted-foreground">للعقارات</p>
+              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">خطوة الثروة</h1>
+              <p className="text-[10px] md:text-xs text-muted-foreground">للعقارات والاستشارات</p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {navigation.map((item) => (
+            {navigation.map((item) =>
               item.hasDropdown ? (
                 <DropdownMenu key={item.name}>
                   <DropdownMenuTrigger asChild>
                     <button
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1 ${
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-1 ${
                         isActive(item.href)
-                          ? "bg-primary text-primary-foreground"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                          ? "bg-secondary text-secondary-foreground"
+                          : "text-foreground/80 hover:text-foreground hover:bg-accent"
                       }`}
                     >
                       {item.name}
                       <ChevronDown className="w-4 h-4" />
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-48">
+                  <DropdownMenuContent align="start" className="w-56">
                     <DropdownMenuItem asChild>
-                      <Link to="/services" className="w-full cursor-pointer font-medium">
+                      <Link to="/services" className="w-full cursor-pointer font-semibold">
                         جميع الخدمات
                       </Link>
                     </DropdownMenuItem>
                     <div className="h-px bg-border my-1" />
-                    {services.map((service) => (
-                      <DropdownMenuItem key={service.name} asChild>
-                        <Link to={service.href} className="w-full cursor-pointer">
-                          {service.name}
+                    {services.map((s) => (
+                      <DropdownMenuItem key={s.name} asChild>
+                        <Link to={s.href} className="w-full cursor-pointer">
+                          {s.name}
                         </Link>
                       </DropdownMenuItem>
                     ))}
@@ -89,84 +93,71 @@ export function Header() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive(item.href)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                    item.highlight
+                      ? "bg-gold text-gold-foreground hover:bg-gold/90 shadow-sm"
+                      : isActive(item.href)
+                      ? "bg-secondary text-secondary-foreground"
+                      : "text-foreground/80 hover:text-foreground hover:bg-accent"
                   }`}
                 >
                   {item.name}
                 </Link>
               )
-            ))}
+            )}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
             <a
               href="tel:+966551535955"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-1.5 text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="hidden xl:inline" dir="ltr">055 153 5955</span>
             </a>
-            <Link to="/contact">
-              <Button className="btn-gold">
-                احصل على استشارة
+            <a
+              href="https://wa.me/966551535955?text=مرحباً،%20أرغب%20في%20استشارة%20عقارية"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-1.5">
+                <MessageCircle className="w-4 h-4" />
+                استشارة مجانية
               </Button>
-            </Link>
+            </a>
           </div>
 
-          {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden p-2 rounded-lg text-muted-foreground hover:bg-muted transition-colors"
+            className="lg:hidden p-2 rounded-md text-foreground hover:bg-accent"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
           >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-2">
-              {navigation.map((item) => (
+            <div className="flex flex-col gap-1.5">
+              {navigation.map((item) =>
                 item.hasDropdown ? (
                   <div key={item.name}>
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
-                      className={`w-full px-4 py-3 rounded-lg text-base font-medium transition-all flex items-center justify-between ${
-                        isActive(item.href)
-                          ? "bg-primary text-primary-foreground"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                      }`}
+                      className="w-full px-4 py-3 rounded-md text-base font-medium flex items-center justify-between text-foreground/80 hover:bg-accent"
                     >
                       {item.name}
                       <ChevronDown className={`w-5 h-5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                     </button>
                     {servicesOpen && (
-                      <div className="mt-2 mr-4 space-y-1 animate-fade-in">
-                        <Link
-                          to="/services"
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="block px-4 py-2 rounded-lg text-sm font-medium text-foreground bg-muted"
-                        >
+                      <div className="mt-1 mr-4 space-y-1 animate-fade-in">
+                        <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 rounded-md text-sm font-semibold bg-accent">
                           جميع الخدمات
                         </Link>
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted"
-                          >
-                            {service.name}
+                        {services.map((s) => (
+                          <Link key={s.name} to={s.href} onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 rounded-md text-sm text-foreground/80 hover:bg-accent">
+                            {s.name}
                           </Link>
                         ))}
                       </div>
@@ -177,29 +168,29 @@ export function Header() {
                     key={item.name}
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${
-                      isActive(item.href)
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    className={`px-4 py-3 rounded-md text-base font-medium ${
+                      item.highlight
+                        ? "bg-gold text-gold-foreground"
+                        : isActive(item.href)
+                        ? "bg-secondary text-secondary-foreground"
+                        : "text-foreground/80 hover:bg-accent"
                     }`}
                   >
                     {item.name}
                   </Link>
                 )
-              ))}
-              <div className="pt-4 mt-2 border-t border-border space-y-3">
-                <a
-                  href="tel:+966551535955"
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-muted text-foreground font-medium"
-                >
+              )}
+              <div className="pt-3 mt-2 border-t border-border space-y-2">
+                <a href="tel:+966551535955" className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-accent text-foreground font-medium">
                   <Phone className="w-5 h-5" />
                   <span dir="ltr">055 153 5955</span>
                 </a>
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="btn-gold w-full">
-                    احصل على استشارة مجانية
+                <a href="https://wa.me/966551535955" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2">
+                    <MessageCircle className="w-5 h-5" />
+                    استشارة مجانية واتساب
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
