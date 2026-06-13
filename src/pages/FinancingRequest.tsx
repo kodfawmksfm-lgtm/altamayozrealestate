@@ -69,7 +69,25 @@ export default function FinancingRequest() {
       return;
     }
     setSubmitting(true);
-    const { error } = await supabase.from("financing_requests").insert([parsed.data]);
+    const d = parsed.data;
+    const { error } = await supabase.from("financing_requests").insert([{
+      full_name: d.full_name,
+      national_id: d.national_id,
+      phone: d.phone,
+      email: d.email || null,
+      city: d.city,
+      age: d.age ?? null,
+      monthly_salary: d.monthly_salary ?? null,
+      employer: d.employer || null,
+      service_years: d.service_years ?? null,
+      monthly_obligations: d.monthly_obligations ?? null,
+      has_existing_financing: d.has_existing_financing,
+      has_defaults: d.has_defaults,
+      property_type: d.property_type || null,
+      owns_land: d.owns_land,
+      additional_details: d.additional_details || null,
+      consent_given: d.consent_given,
+    }]);
     setSubmitting(false);
     if (error) {
       toast({ title: "تعذر إرسال الطلب", description: error.message, variant: "destructive" });
