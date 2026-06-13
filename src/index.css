@@ -8,62 +8,56 @@
 
 @layer base {
   :root {
-    /* الألوان الأساسية - أزرق مؤسسي */
-    --primary: 217 71% 23%;
-    --primary-foreground: 210 40% 98%;
+    /* الأساسي - ذهبي فاخر #D4A017 */
+    --primary: 43 86% 47%;
+    --primary-foreground: 0 0% 11%;
 
-    /* الألوان الذهبية - للتميز */
-    --gold: 43 74% 52%;
-    --gold-foreground: 217 71% 15%;
+    /* الذهبي */
+    --gold: 43 86% 47%;
+    --gold-foreground: 0 0% 11%;
 
-    /* الألوان الخضراء - للثقة والمال */
-    --trust: 142 64% 24%;
-    --trust-foreground: 210 40% 98%;
+    /* الثقة */
+    --trust: 142 50% 28%;
+    --trust-foreground: 0 0% 100%;
 
-    /* ألوان الخلفية */
-    --background: 210 20% 98%;
-    --foreground: 217 71% 15%;
+    /* الخلفية - أبيض نقي */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
 
-    /* البطاقات */
     --card: 0 0% 100%;
-    --card-foreground: 217 71% 15%;
+    --card-foreground: 0 0% 13%;
 
-    /* النوافذ المنبثقة */
     --popover: 0 0% 100%;
-    --popover-foreground: 217 71% 15%;
+    --popover-foreground: 0 0% 13%;
 
-    /* الثانوي */
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 217 71% 23%;
+    /* الثانوي - أسود فاخر #1B1B1B */
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* الصامت */
-    --muted: 210 20% 94%;
-    --muted-foreground: 217 20% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    /* التمييز */
-    --accent: 43 74% 95%;
-    --accent-foreground: 217 71% 15%;
+    /* التمييز #F5F5F5 */
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 13%;
 
-    /* التحذيرات */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* الحدود والمدخلات */
-    --border: 217 20% 88%;
-    --input: 217 20% 88%;
-    --ring: 43 74% 52%;
+    --border: 0 0% 90%;
+    --input: 0 0% 92%;
+    --ring: 43 86% 47%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* الشريط الجانبي */
-    --sidebar-background: 217 71% 15%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 43 74% 52%;
-    --sidebar-primary-foreground: 217 71% 15%;
-    --sidebar-accent: 217 60% 25%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 40% 30%;
-    --sidebar-ring: 43 74% 52%;
+    --sidebar-background: 0 0% 11%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 43 86% 47%;
+    --sidebar-primary-foreground: 0 0% 11%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 43 86% 47%;
   }
 
   .dark {
