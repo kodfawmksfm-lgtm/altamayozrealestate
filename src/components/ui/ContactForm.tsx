@@ -33,9 +33,9 @@ export function ContactForm({ preSelectedService, variant = "default" }: Contact
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.agreed) {
       toast({
         title: "يرجى الموافقة على الإقرار",
@@ -47,7 +47,21 @@ export function ContactForm({ preSelectedService, variant = "default" }: Contact
 
     setIsSubmitting(true);
 
-    // Construct WhatsApp message
+    // Persist lead to database (fire-and-forget; we still continue to WhatsApp on failure)
+    try {
+      const { supabase } = await import("@/integrations/supabase/client");
+      await supabase.from("leads").insert([{
+        name: formData.name.trim(),
+        phone: formData.phone.trim(),
+        email: null,
+        service: formData.service || null,
+        message: formData.message?.trim() || null,
+        source: "contact-form",
+      }]);
+    } catch {
+      /* non-blocking */
+    }
+
     const serviceName = services.find(s => s.value === formData.service)?.label || "غير محدد";
     const message = `
 مرحباً، أرغب في الاستفسار عن خدماتكم.
@@ -61,13 +75,11 @@ ${formData.message ? `الرسالة: ${formData.message}` : ""}
     `.trim();
 
     const whatsappUrl = `https://wa.me/966551535955?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp in new tab
     window.open(whatsappUrl, "_blank");
 
     toast({
-      title: "تم فتح واتساب",
-      description: "سيتم التواصل معك في أقرب وقت ممكن",
+      title: "تم استلام بياناتك",
+      description: "سيتم تحويلك إلى واتساب للمتابعة الفورية",
     });
 
     setIsSubmitting(false);
