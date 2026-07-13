@@ -69,7 +69,7 @@ const benefits = [
   {
     icon: Award,
     title: "خبرة واسعة",
-    description: "سنوات من الخبرة في الاستثمار العقاري",
+    description: "سنوات من الخبرة في إعادة هيكلة القروض",
   },
 ];
 
@@ -84,7 +84,7 @@ const testimonials = [
   {
     name: "خالد العتيبي",
     role: "مستثمر",
-    content: "استثمرت في عدة فرص عقارية مع خطوة الثروة وكانت العوائد ممتازة.",
+    content: "استثمرت في عدة فرص عقارية مع تمكين وكانت العوائد ممتازة.",
     rating: 5,
   },
   {
@@ -113,24 +113,24 @@ const faqItems = [
     answer: "نحرص على الفحص القانوني الكامل لكل عقار، والتحقق من جميع الأوراق والتراخيص. كما نوفر استشارات قانونية متخصصة ونوثق جميع العقود لدى الجهات الرسمية.",
   },
   {
-    question: "هل الاستثمار العقاري مناسب لي؟",
-    answer: "الاستثمار العقاري يناسب من يبحث عن استثمار طويل الأمد. ننصح بالتواصل مع مستشارينا لتقييم وضعك المالي وتحديد الخيار الأنسب لأهدافك الاستثمارية.",
+    question: "هل إعادة هيكلة القروض مناسب لي؟",
+    answer: "إعادة هيكلة القروض يناسب من يبحث عن استثمار طويل الأمد. ننصح بالتواصل مع مستشارينا لتقييم وضعك المالي وتحديد الخيار الأنسب لأهدافك الاستثمارية.",
   },
 ];
 
 export default function RealEstateInvestment() {
-  const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن فرص الاستثمار العقاري");
-  const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
+  const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن فرص إعادة هيكلة القروض");
+  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
 
   return (
     <Layout>
       <HeroSection
-        title="الاستثمار العقاري"
+        title="إعادة هيكلة القروض"
         subtitle="استثمر بثقة وأمان"
         description="نقدم فرصاً استثمارية عقارية مدروسة بعناية، مع دراسات جدوى شاملة وفحص قانوني كامل، لمساعدتك في اتخاذ قرارات استثمارية واعية."
         image={serviceImage}
         primaryCTA={{ text: "اكتشف الفرص المتاحة", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966551535955" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966567597514" }}
         variant="service"
       />
 
@@ -151,7 +151,7 @@ export default function RealEstateInvestment() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -234,7 +234,7 @@ export default function RealEstateInvestment() {
             <div className="relative">
               <img 
                 src={serviceImage} 
-                alt="الاستثمار العقاري" 
+                alt="إعادة هيكلة القروض" 
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-trust text-white p-4 rounded-xl shadow-lg">
@@ -353,8 +353,8 @@ export default function RealEstateInvestment() {
         <div className="container-rtl">
           <FAQSection
             items={faqItems}
-            title="الأسئلة الشائعة عن الاستثمار العقاري"
-            description="إجابات على أكثر الأسئلة شيوعاً حول خدمات الاستثمار العقاري"
+            title="الأسئلة الشائعة عن إعادة هيكلة القروض"
+            description="إجابات على أكثر الأسئلة شيوعاً حول خدمات إعادة هيكلة القروض"
           />
         </div>
       </section>
@@ -399,7 +399,7 @@ export default function RealEstateInvestment() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

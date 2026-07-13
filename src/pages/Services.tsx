@@ -39,7 +39,7 @@ const services = [
   },
   {
     title: "استثمار عقاري",
-    description: "فرص استثمارية مدروسة في القطاع العقاري السعودي. نقدم تحليلات شاملة ودراسات جدوى لمساعدتك في اتخاذ قرارات استثمارية مبنية على معلومات دقيقة.",
+    description: "فرص استثمارية مدروسة في قطاع التمويل السعودي. نقدم تحليلات شاملة ودراسات جدوى لمساعدتك في اتخاذ قرارات استثمارية مبنية على معلومات دقيقة.",
     icon: TrendingUp,
     href: "/services/investment",
     image: service4,
@@ -66,7 +66,7 @@ const services = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
 
 const Services = () => {
   return (
@@ -74,7 +74,7 @@ const Services = () => {
       {/* Hero Section */}
       <HeroSection
         title="خدماتنا المتميزة"
-        subtitle="حلول عقارية شاملة"
+        subtitle="حلول تمويلية شاملة"
         description="نقدم مجموعة متكاملة من الخدمات العقارية المصممة لتلبية جميع احتياجاتك. جميع خدماتنا تتم وفق الأنظمة السعودية المعتمدة وبأعلى معايير الجودة والشفافية."
         showTrustBadges
         variant="service"
@@ -97,7 +97,7 @@ const Services = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -114,7 +114,7 @@ const Services = () => {
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-primary/10 text-primary">اختر خدمتك</Badge>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              6 خدمات عقارية متكاملة
+              6 خدمات تمويلية متكاملة
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               اضغط على الخدمة التي تناسبك للتعرف على التفاصيل والتواصل معنا
@@ -165,7 +165,7 @@ const Services = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

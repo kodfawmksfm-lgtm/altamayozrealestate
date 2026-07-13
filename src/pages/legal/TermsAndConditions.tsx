@@ -16,14 +16,14 @@ export default function TermsAndConditions() {
             
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. مقدمة</h2>
             <p className="text-muted-foreground mb-4">
-              مرحباً بكم في الموقع الإلكتروني لشركة خطوة الثروة للعقارات. باستخدامك لهذا الموقع، 
+              مرحباً بكم في الموقع الإلكتروني لمكتب تمكين للحلول التمويلية. باستخدامك لهذا الموقع، 
               فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، 
               يرجى عدم استخدام الموقع.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">2. تعريفات</h2>
             <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
-              <li><strong>"الشركة"</strong> تشير إلى شركة خطوة الثروة للعقارات.</li>
+              <li><strong>"الشركة"</strong> تشير إلى مكتب تمكين للحلول التمويلية.</li>
               <li><strong>"الموقع"</strong> يشير إلى هذا الموقع الإلكتروني وجميع صفحاته.</li>
               <li><strong>"المستخدم"</strong> يشير إلى أي شخص يستخدم الموقع أو خدماته.</li>
               <li><strong>"الخدمات"</strong> تشير إلى جميع الخدمات العقارية والتمويلية التي تقدمها الشركة.</li>
@@ -31,8 +31,8 @@ export default function TermsAndConditions() {
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">3. طبيعة الخدمات</h2>
             <p className="text-muted-foreground mb-4">
-              تقدم الشركة خدمات عقارية ووساطة تمويلية متنوعة تشمل التمويل العقاري، التطوير العقاري، 
-              الاستثمار العقاري، توفير العقارات، التصميم والترميم، والتسويق العقاري.
+              تقدم الشركة خدمات تمويلية ووساطة تمويلية متنوعة تشمل التمويل الشخصي، التطوير العقاري، 
+              إعادة هيكلة القروض، توفير العقارات، التصميم والترميم، ومتابعة الطلبات.
             </p>
             <p className="text-muted-foreground mb-4">
               <strong>يُقر المستخدم ويفهم أن:</strong>
@@ -52,7 +52,7 @@ export default function TermsAndConditions() {
               <li>أنظمة ولوائح البنك المركزي السعودي (ساما).</li>
               <li>أنظمة هيئة السوق المالية.</li>
               <li>نظام الإيجار التمويلي.</li>
-              <li>نظام التمويل العقاري.</li>
+              <li>نظام التمويل الشخصي.</li>
               <li>نظام حماية البيانات الشخصية (PDPL).</li>
             </ul>
 
@@ -108,7 +108,7 @@ export default function TermsAndConditions() {
               لأي استفسارات حول هذه الشروط والأحكام، يرجى التواصل معنا عبر:
             </p>
             <ul className="list-none text-muted-foreground mb-4 space-y-2">
-              <li>الهاتف: +966 55 153 5955</li>
+              <li>الهاتف: +966 56 759 7514</li>
               <li>العنوان: 3061 – 8091 شارع بحر العرب – حي الخليج – الرياض 13224</li>
             </ul>
 

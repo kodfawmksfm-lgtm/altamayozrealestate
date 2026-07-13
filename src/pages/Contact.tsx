@@ -19,22 +19,22 @@ const contactInfo = [
   {
     icon: Phone,
     title: "اتصل بنا",
-    value: "+966 55 153 5955",
-    href: "tel:+966551535955",
+    value: "+966 56 759 7514",
+    href: "tel:+966567597514",
     description: "متاحون للرد على استفساراتك",
   },
   {
     icon: MessageCircle,
     title: "واتساب",
-    value: "+966 55 153 5955",
-    href: "https://wa.me/966551535955",
+    value: "+966 56 759 7514",
+    href: "https://wa.me/966567597514",
     description: "رد سريع خلال دقائق ⚡",
   },
   {
     icon: Mail,
     title: "البريد الإلكتروني",
-    value: "majeedceo@thewealthstep.com",
-    href: "mailto:majeedceo@thewealthstep.com",
+    value: "info@tamkeen-sa.com",
+    href: "mailto:info@tamkeen-sa.com",
     description: "راسلنا في أي وقت",
   },
   {
@@ -46,7 +46,7 @@ const contactInfo = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
 
 const Contact = () => {
   return (
@@ -66,7 +66,7 @@ const Contact = () => {
             <div className="flex items-center gap-2 text-gold-foreground">
               <Sparkles className="w-5 h-5" />
               <span className="font-bold">استشارة مجانية</span>
-              <span className="hidden sm:inline">- تواصل الآن واحصل على استشارة عقارية</span>
+              <span className="hidden sm:inline">- تواصل الآن واحصل على استشارة تمويلية</span>
             </div>
             <div className="flex gap-3">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -76,7 +76,7 @@ const Contact = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -158,7 +158,7 @@ const Contact = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="موقع شركة خطوة الثروة للعقارات"
+                    title="موقع مكتب تمكين للحلول التمويلية"
                   />
                 </div>
               </Card>

@@ -8,15 +8,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/khotwah-logo.png";
+import logo from "@/assets/tamkeen-logo.jpg.asset.json";
 
 const services = [
-  { name: "الوساطة العقارية", href: "/services/ready-properties" },
-  { name: "التسويق العقاري", href: "/services/marketing" },
-  { name: "الاستشارات العقارية", href: "/services/cash-financing" },
-  { name: "برامج البناء الذاتي", href: "/services/development" },
-  { name: "الحلول الاستثمارية", href: "/services/investment" },
-  { name: "تحليل الفرص العقارية", href: "/services/design" },
+  { name: "التمويل الشخصي", href: "/services/ready-properties" },
+  { name: "متابعة الطلبات", href: "/services/marketing" },
+  { name: "الاستشارات المالية", href: "/services/cash-financing" },
+  { name: "إعادة هيكلة الالتزامات", href: "/services/development" },
+  { name: "حلول للمتعثرين", href: "/services/investment" },
+  { name: "دراسة الأهلية", href: "/services/design" },
 ];
 
 const navigation = [
@@ -43,19 +43,20 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
       <nav className="container-rtl">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-3 group" aria-label="خطوة الثروة للعقارات">
+          <Link to="/" className="flex items-center gap-3 group" aria-label="تمكين للحلول التمويلية">
             <img
-              src={logo}
-              alt="شعار خطوة الثروة للعقارات"
+              src={logo.url}
+              alt="شعار تمكين للحلول التمويلية"
               width={56}
               height={56}
-              className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-105"
+              className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-md transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:block">
-              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">خطوة الثروة</h1>
-              <p className="text-[10px] md:text-xs text-muted-foreground">للعقارات والاستشارات</p>
+              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">تمكين</h1>
+              <p className="text-[10px] md:text-xs text-muted-foreground">للحلول التمويلية</p>
             </div>
           </Link>
+
 
           <div className="hidden lg:flex items-center gap-1">
             {navigation.map((item) =>
@@ -109,14 +110,14 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+966551535955"
+              href="tel:+966567597514"
               className="flex items-center gap-1.5 text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="hidden xl:inline" dir="ltr">055 153 5955</span>
+              <span className="hidden xl:inline" dir="ltr">056 759 7514</span>
             </a>
             <a
-              href="https://wa.me/966551535955?text=مرحباً،%20أرغب%20في%20استشارة%20عقارية"
+              href="https://wa.me/966567597514?text=مرحباً،%20أرغب%20في%20استشارة%20عقارية"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -181,11 +182,11 @@ export function Header() {
                 )
               )}
               <div className="pt-3 mt-2 border-t border-border space-y-2">
-                <a href="tel:+966551535955" className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-accent text-foreground font-medium">
+                <a href="tel:+966567597514" className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-accent text-foreground font-medium">
                   <Phone className="w-5 h-5" />
-                  <span dir="ltr">055 153 5955</span>
+                  <span dir="ltr">056 759 7514</span>
                 </a>
-                <a href="https://wa.me/966551535955" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://wa.me/966567597514" target="_blank" rel="noopener noreferrer" className="block">
                   <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2">
                     <MessageCircle className="w-5 h-5" />
                     استشارة مجانية واتساب

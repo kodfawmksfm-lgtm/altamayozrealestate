@@ -96,7 +96,7 @@ export default function FinancingRequest() {
     setDone(true);
     toast({ title: "تم استلام طلبك", description: "سنتواصل معك خلال 24 ساعة عمل" });
     const msg = `طلب تمويل عقاري جديد:\nالاسم: ${f.full_name}\nالجوال: ${f.phone}\nالمدينة: ${f.city}\nنوع العقار: ${f.property_type || "غير محدد"}`;
-    window.open(`https://wa.me/966551535955?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/966567597514?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   if (done) {
@@ -109,9 +109,9 @@ export default function FinancingRequest() {
             </div>
             <h1 className="text-3xl font-bold mb-3">تم استلام طلبك بنجاح</h1>
             <p className="text-muted-foreground mb-6">
-              شكراً لثقتك بشركة خطوة الثروة. سيتواصل معك أحد مستشارينا خلال 24 ساعة عمل لمناقشة الخيارات المتاحة.
+              شكراً لثقتك بمكتب تمكين. سيتواصل معك أحد مستشارينا خلال 24 ساعة عمل لمناقشة الخيارات المتاحة.
             </p>
-            <a href="https://wa.me/966551535955" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/966567597514" target="_blank" rel="noopener noreferrer">
               <Button className="bg-gold text-gold-foreground hover:bg-gold/90 gap-2">
                 <MessageCircle className="w-5 h-5" /> تواصل واتساب فوري
               </Button>
@@ -125,9 +125,9 @@ export default function FinancingRequest() {
   return (
     <Layout>
       <Helmet>
-        <title>قدّم طلب تمويل عقاري | خطوة الثروة للعقارات</title>
-        <meta name="description" content="قدّم طلب تمويل عقاري إلكترونياً مع شركة خطوة الثروة للعقارات. دراسة احترافية، شفافية كاملة، وحلول مخصصة وفق الأنظمة السعودية." />
-        <link rel="canonical" href="https://thewealthstep.com/financing-request" />
+        <title>قدّم طلب تمويل عقاري | تمكين للحلول التمويلية</title>
+        <meta name="description" content="قدّم طلب تمويل عقاري إلكترونياً مع مكتب تمكين للحلول التمويلية. دراسة احترافية، شفافية كاملة، وحلول مخصصة وفق الأنظمة السعودية." />
+        <link rel="canonical" href="https://tamkeen-sa.com/financing-request" />
       </Helmet>
 
       {/* Hero */}
@@ -248,18 +248,18 @@ export default function FinancingRequest() {
                     <Label htmlFor="consent_given" className="cursor-pointer text-sm leading-relaxed text-foreground">
                       أُقرّ بصحة البيانات المُدخلة، وأوافق على{" "}
                       <a href="/legal/terms" className="text-gold underline">الشروط والأحكام</a>{" و "}
-                      <a href="/legal/privacy" className="text-gold underline">سياسة الخصوصية</a>،
-                      وأعلم أن تقديم الطلب لا يُعد التزاماً بالتمويل أو ضماناً للموافقة،
-                      وأن الموافقة النهائية تخضع للدراسة الائتمانية والتقييم العقاري من الجهات المختصة وفق الأنظمة السعودية المعتمدة.
+                      <a href="/legal/privacy" className="text-gold underline">سياسة الخصوصية</a>.
+                      وأعلم أن جميع الطلبات تخضع للتحقق من الأهلية، وأن قبول الطلب أو استلامه لا يُعدّ موافقة على الإقراض أو التمويل، وأن كل حالة تُدرَس على حدة وفق معايير ووضع كل متقدّم طبقاً للشروط والأحكام المنظّمة. وأن الخدمات تخضع لرقابة ومراجعة الجهات المختصة في المملكة العربية السعودية.
                     </Label>
                   </div>
                 </div>
+
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button type="submit" size="lg" disabled={submitting} className="bg-gold text-gold-foreground hover:bg-gold/90 gap-2 flex-1 font-bold">
                     {submitting ? "جاري الإرسال..." : <>إرسال الطلب <Sparkles className="w-4 h-4" /></>}
                   </Button>
-                  <a href="https://wa.me/966551535955" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <a href="https://wa.me/966567597514" target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button type="button" variant="outline" size="lg" className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground gap-2">
                       <MessageCircle className="w-5 h-5" /> أرسل عبر واتساب بدلاً من ذلك
                     </Button>

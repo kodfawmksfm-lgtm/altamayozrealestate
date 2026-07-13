@@ -10,47 +10,48 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
 
-const whatsapp = `https://wa.me/966551535955?text=${encodeURIComponent("مرحباً، أرغب باستشارة عقارية مجانية من خطوة الثروة")}`;
+const whatsapp = `https://wa.me/966567597514?text=${encodeURIComponent("مرحباً، أرغب باستشارة تمويلية مجانية من مكتب تمكين")}`;
 
 const services = [
-  { icon: Home, title: "خدمات الوساطة العقارية", desc: "ربط البائع بالمشتري بشفافية كاملة، توثيق العقود، ومتابعة الإجراءات حتى نقل الملكية.", href: "/services/ready-properties" },
-  { icon: Megaphone, title: "خدمات التسويق العقاري", desc: "حملات تسويقية احترافية للمشاريع والوحدات العقارية، استهداف دقيق، ونتائج قابلة للقياس.", href: "/services/marketing" },
-  { icon: Briefcase, title: "الاستشارات العقارية", desc: "دراسة احتياجاتك وتقديم خيارات عقارية وتمويلية تناسب وضعك المالي وأهدافك.", href: "/services/cash-financing" },
-  { icon: Hammer, title: "برامج البناء الذاتي", desc: "مرافقة كاملة من اختيار الأرض إلى التصميم والتنفيذ ضمن الميزانية المخططة.", href: "/services/development" },
-  { icon: BarChart3, title: "الحلول الاستثمارية العقارية", desc: "هيكلة محافظ عقارية متوازنة بدراسات جدوى مفصلة وإدارة مخاطر احترافية.", href: "/services/investment" },
-  { icon: FileSearch, title: "تحليل الفرص العقارية", desc: "تقييم متعمق للفرص في السوق السعودي مع توصيات قائمة على بيانات دقيقة.", href: "/services/design" },
+  { icon: Briefcase, title: "تمويل شخصي", desc: "حلول تمويل شخصي مرنة تناسب وضعك المالي، بإجراءات ميسّرة ومتابعة احترافية حتى إتمام الطلب.", href: "/services/cash-financing" },
+  { icon: Repeat, title: "إعادة هيكلة الالتزامات", desc: "خطة عملية لإعادة تنظيم قروضك والتزاماتك الحالية بما يتناسب مع دخلك الشهري وقدرتك على السداد.", href: "/services/development" },
+  { icon: FileCheck, title: "حلول للمتعثرين", desc: "دراسة حالتك المالية وتقديم خيارات لتسوية المتعثرات وفق الأنظمة والشروط المعتمدة من الجهات الرقابية.", href: "/services/investment" },
+  { icon: BarChart3, title: "استشارات مالية", desc: "استشارات متخصصة في اتخاذ القرار التمويلي المناسب، مع مقارنة الخيارات المتاحة بشفافية كاملة.", href: "/services/ready-properties" },
+  { icon: Megaphone, title: "متابعة الطلبات", desc: "متابعة احترافية لطلبك مع الجهات التمويلية، وتحديث دوري لحالتك حتى صدور القرار النهائي.", href: "/services/marketing" },
+  { icon: FileSearch, title: "دراسة الأهلية", desc: "تحليل مبدئي لأهليتك التمويلية قبل تقديم الطلب لتوفير الوقت وزيادة فرص القبول.", href: "/services/design" },
 ];
 
 const whyUs = [
-  { icon: ShieldCheck, title: "شركة مرخصة", desc: "رخصة فال 1200048456 وسجل تجاري موثق" },
-  { icon: Award, title: "خبرة متخصصة", desc: "في إدارة الأصول والاستثمار العقاري" },
-  { icon: FileCheck, title: "التزام نظامي", desc: "توافق كامل مع أنظمة المملكة المعتمدة" },
-  { icon: Users, title: "متابعة احترافية", desc: "فريق مرافق لك في كل خطوة" },
-  { icon: TrendingUp, title: "حلول مخصصة", desc: "مصممة وفق أهدافك ووضعك المالي" },
-  { icon: Eye, title: "شفافية كاملة", desc: "إفصاح واضح في كل التفاصيل والشروط" },
+  { icon: ShieldCheck, title: "مكتب موثوق", desc: "خاضع لرقابة ومراجعة الجهات المختصة في المملكة" },
+  { icon: Award, title: "خبرة متخصصة", desc: "في التمويل الشخصي وإعادة هيكلة الالتزامات" },
+  { icon: FileCheck, title: "التزام نظامي", desc: "توافق كامل مع أنظمة الإقراض في المملكة" },
+  { icon: Users, title: "متابعة احترافية", desc: "فريق مرافق لك من الطلب حتى القرار" },
+  { icon: TrendingUp, title: "حلول مخصصة", desc: "مصممة وفق وضعك المالي وقدرتك على السداد" },
+  { icon: Eye, title: "شفافية كاملة", desc: "لا وعود مضمونة قبل دراسة الأهلية" },
 ];
 
 const steps = [
   { icon: ClipboardList, t: "تقديم الطلب", d: "املأ النموذج أو تواصل عبر واتساب" },
-  { icon: FileSearch, t: "دراسة الحالة", d: "تحليل احتياجاتك ووضعك المالي" },
-  { icon: Eye, t: "مراجعة الخيارات", d: "نعرض الخيارات الأنسب لك بشفافية" },
-  { icon: FileSignature, t: "استكمال الإجراءات", d: "توثيق العقود وإكمال المعاملات" },
-  { icon: Repeat, t: "المتابعة والتنفيذ", d: "مرافقة مستمرة حتى تحقيق الهدف" },
+  { icon: FileSearch, t: "دراسة الأهلية", d: "تحليل وضعك المالي وفق المعايير" },
+  { icon: Eye, t: "عرض الخيارات", d: "نعرض عليك الحلول المناسبة بشفافية" },
+  { icon: FileSignature, t: "استكمال الإجراءات", d: "توثيق الطلب مع الجهة التمويلية" },
+  { icon: Repeat, t: "المتابعة والتنفيذ", d: "متابعة الطلب حتى صدور القرار" },
 ];
 
 const values = [
   { t: "الشفافية", d: "إفصاح كامل في كل تفصيلة" },
   { t: "المصداقية", d: "ما نَعِد به نلتزم به" },
-  { t: "الاحترافية", d: "معايير عمل عالية ومدروسة" },
-  { t: "الامتثال التنظيمي", d: "التزام بكل أنظمة المملكة" },
+  { t: "الاحترافية", d: "معايير عمل مدروسة" },
+  { t: "الامتثال التنظيمي", d: "التزام بأنظمة المملكة" },
   { t: "خدمة العميل", d: "العميل في قلب كل قرار" },
 ];
 
 const testimonials = [
-  { name: "محمد ع.", role: "عميل تمويل", text: "تجربة احترافية من البداية للنهاية. شرحوا لي كل الخيارات بوضوح واخترت ما يناسبني فعلاً." },
-  { name: "نورة س.", role: "مستثمرة", text: "ساعدوني في بناء محفظة عقارية بدراسة جدوى دقيقة. شفافية تامة وفريق متعاون." },
-  { name: "عبدالله م.", role: "صاحب أرض", text: "خدمة التسويق نقلت مشروعي لمستوى آخر. حملة احترافية ونتائج ملموسة خلال أسابيع." },
+  { name: "محمد ع.", role: "عميل تمويل شخصي", text: "خدمة راقية وسريعة. شرحوا لي كل الخيارات بوضوح واخترت ما يناسب دخلي فعلاً." },
+  { name: "نورة س.", role: "إعادة هيكلة", text: "ساعدوني في تنظيم التزاماتي الشهرية بخطة واقعية. متابعة ممتازة وشفافية تامة." },
+  { name: "عبدالله م.", role: "تسوية متعثرات", text: "درسوا حالتي بعناية وقدّموا لي خيارات نظامية أعادت لي الاستقرار المالي." },
 ];
+
 
 const Index = () => {
   return (
@@ -64,16 +65,16 @@ const Index = () => {
         <div className="relative container-rtl py-20 md:py-28 lg:py-36">
           <div className="max-w-3xl">
             <Badge className="mb-5 bg-gold/20 text-gold border-gold/30 hover:bg-gold/25">
-              <Sparkles className="w-3.5 h-3.5 ml-1" /> شركة سعودية مرخصة
+              <Sparkles className="w-3.5 h-3.5 ml-1" /> مكتب متخصص في الحلول التمويلية
             </Badge>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
-              حلول عقارية واستشارية متكاملة
-              <span className="block text-gold mt-2">وفق الأنظمة السعودية</span>
+              حلول تمويلية ذكية
+              <span className="block text-gold mt-2">تناسب احتياجاتك</span>
             </h1>
             <p className="text-base md:text-lg text-white/85 leading-relaxed mb-8 max-w-2xl">
-              نساعدك على استكشاف الخيارات العقارية والتمويلية المناسبة لأهدافك السكنية والاستثمارية،
-              من خلال خدمات احترافية قائمة على الخبرة والشفافية والالتزام التنظيمي.
+              تمويل شخصي، إعادة هيكلة الالتزامات، وحلول عملية للمتعثرين — بمرونة في السداد وخيارات متعددة ومتابعة احترافية حتى الحصول على القرار المناسب.
             </p>
+
             <div className="flex flex-wrap gap-3">
               <a href={whatsapp} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground gap-2 font-bold">
@@ -107,7 +108,7 @@ const Index = () => {
         <div className="container-rtl flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-gold-foreground text-sm font-medium">
             <Sparkles className="w-4 h-4" />
-            <span>استشارة عقارية مجانية الآن</span>
+            <span>استشارة تمويلية مجانية الآن</span>
             <span className="animate-pulse">⚡</span>
           </div>
           <div className="flex gap-2">
@@ -116,7 +117,7 @@ const Index = () => {
                 <MessageCircle className="w-4 h-4" /> واتساب
               </Button>
             </a>
-            <a href="tel:+966551535955">
+            <a href="tel:+966567597514">
               <Button size="sm" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent gap-1.5">
                 <Phone className="w-4 h-4" /> اتصل الآن
               </Button>
@@ -130,9 +131,9 @@ const Index = () => {
         <div className="container-rtl">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4 bg-accent text-secondary">من نحن</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">شركة خطوة الثروة للعقارات</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">مكتب تمكين للحلول التمويلية</h2>
             <p className="text-muted-foreground leading-relaxed">
-              تأسست شركة خطوة الثروة للعقارات انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
+              تأسست مكتب تمكين للحلول التمويلية انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
               يمثلان حجر الأساس لبناء الأصول وتحقيق الاستقرار المالي على المدى الطويل.
             </p>
           </div>
@@ -144,7 +145,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-foreground">رؤيتنا</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  أن نكون من الشركات الرائدة في تقديم الحلول العقارية والاستشارية المتكاملة في المملكة العربية السعودية.
+                  أن نكون من الشركات الرائدة في تقديم الحلول التمويلية والاستشارية المتكاملة في المملكة العربية السعودية.
                 </p>
               </CardContent>
             </Card>
@@ -155,7 +156,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-foreground">رسالتنا</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  تمكين العملاء من الوصول إلى حلول عقارية وتمويلية مناسبة لأهدافهم السكنية والاستثمارية،
+                  تمكين العملاء من الوصول إلى حلول تمويلية متكاملة مناسبة لأهدافهم السكنية والاستثمارية،
                   من خلال خدمات احترافية قائمة على الشفافية والخبرة والالتزام.
                 </p>
               </CardContent>
@@ -177,8 +178,8 @@ const Index = () => {
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <Badge className="mb-4 bg-gold/15 text-gold border-gold/30">خدماتنا</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">خدمات عقارية متكاملة باحترافية</h2>
-            <p className="text-muted-foreground">منظومة خدمات متخصصة تغطي كل احتياجاتك العقارية والاستثمارية</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">خدمات تمويلية متكاملة باحترافية</h2>
+            <p className="text-muted-foreground">منظومة خدمات متخصصة تغطي كل احتياجاتك التمويلية</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
@@ -205,7 +206,7 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <Badge className="mb-4 bg-secondary text-secondary-foreground">لماذا خطوة الثروة</Badge>
+            <Badge className="mb-4 bg-secondary text-secondary-foreground">لماذا تمكين</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">ست أسباب تجعلنا خيارك الأول</h2>
             <p className="text-muted-foreground">نتعامل بمصداقية مؤسسية وشفافية كاملة في كل خطوة</p>
           </div>
@@ -225,30 +226,30 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Licenses */}
+      {/* Trust & compliance */}
       <section className="section-padding bg-secondary text-secondary-foreground">
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <Badge className="mb-4 bg-gold/20 text-gold border-gold/30">التراخيص والاعتمادات</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">موثوقة ومرخصة رسمياً</h2>
-            <p className="text-secondary-foreground/75">نعمل تحت مظلة الأنظمة الرسمية في المملكة العربية السعودية</p>
+            <Badge className="mb-4 bg-gold/20 text-gold border-gold/30">الموثوقية والامتثال</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">خاضعون لرقابة الجهات المختصة</h2>
+            <p className="text-secondary-foreground/75">نعمل تحت مظلة الأنظمة المعتمدة في المملكة العربية السعودية</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { t: "السجل التجاري", v: "7037372658", d: "الرقم الوطني الموحد" },
-              { t: "رخصة فال", v: "1200048456", d: "ترخيص الوساطة والتسويق العقاري" },
-              { t: "شهادة الزكاة والضريبة", v: "سارية", d: "متوافقة مع هيئة الزكاة والضريبة" },
+              { t: "تحقّق من الأهلية", d: "دراسة كل حالة على حدة وفق الشروط والأحكام المنظّمة" },
+              { t: "شفافية كاملة", d: "لا وعود مضمونة بالتمويل أو معدلات فائدة قبل الدراسة" },
+              { t: "رقابة ومراجعة", d: "الخدمات تخضع لرقابة الجهات المختصة في المملكة" },
             ].map((l) => (
               <div key={l.t} className="bg-secondary-foreground/5 border border-gold/20 rounded-md p-6 text-center backdrop-blur-sm">
                 <ShieldCheck className="w-10 h-10 text-gold mx-auto mb-3" />
-                <div className="text-sm text-secondary-foreground/70 mb-1">{l.t}</div>
-                <div className="text-xl font-bold text-gold mb-2" dir="ltr">{l.v}</div>
-                <div className="text-xs text-secondary-foreground/60">{l.d}</div>
+                <div className="text-lg font-bold text-gold mb-2">{l.t}</div>
+                <div className="text-xs text-secondary-foreground/70 leading-relaxed">{l.d}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* How it works */}
       <section className="section-padding bg-background">
@@ -312,7 +313,7 @@ const Index = () => {
           <Sparkles className="w-10 h-10 text-gold mx-auto mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold mb-3">خطوتك القادمة تبدأ من هنا</h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-7">
-            تواصل معنا الآن للحصول على استشارة عقارية مجانية من خبرائنا المعتمدين، أو قدّم طلب تمويل ونتولى دراستك بشكل احترافي.
+            تواصل معنا الآن للحصول على استشارة تمويلية مجانية من خبرائنا المعتمدين، أو قدّم طلب تمويل ونتولى دراستك بشكل احترافي.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href={whatsapp} target="_blank" rel="noopener noreferrer">
@@ -329,17 +330,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Legal disclaimer (Snapchat/Meta compliance) */}
+      {/* Legal disclaimer (Snapchat/Meta ads compliance) */}
       <section className="py-5 bg-background border-t border-border">
         <div className="container-rtl">
           <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed">
             <ShieldCheck className="w-3.5 h-3.5 inline-block ml-1 text-gold" />
-            شركة خطوة الثروة للعقارات شركة وساطة واستشارات عقارية مرخصة (رخصة فال 1200048456) ولا تُعد جهة تمويلية.
-            الموافقة على التمويل ليست مضمونة وتخضع للدراسة الائتمانية والتقييم العقاري من الجهات المختصة.
-            لا يُعد أي محتوى التزامًا بالتمويل أو ضمانًا لأي عوائد استثمارية.
+            جميع الطلبات المقدَّمة إلى مكتب تمكين للحلول التمويلية تخضع للتحقق من الأهلية، ولا يُعدّ قبول الطلب أو استلامه موافقةً على الإقراض أو التمويل. تُدرَس كل حالة على حدة وفق معايير ووضع كل متقدّم طبقاً للشروط والأحكام المنظّمة. الخدمات تخضع لرقابة ومراجعة الجهات المختصة في المملكة العربية السعودية، ولا يُقدَّم أي وعد بمعدلات فائدة أو مبالغ أو فترات سداد مضمونة قبل الدراسة الائتمانية.
           </p>
         </div>
       </section>
+
     </Layout>
   );
 };

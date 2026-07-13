@@ -83,7 +83,7 @@ const testimonials = [
   {
     name: "ناصر القحطاني",
     role: "مالك فيلا",
-    content: "وجدت منزل أحلامي من خلال خطوة الثروة. خدمة ممتازة ومتابعة رائعة.",
+    content: "وجدت منزل أحلامي من خلال تمكين. خدمة ممتازة ومتابعة رائعة.",
     rating: 5,
   },
   {
@@ -108,7 +108,7 @@ const faqItems = [
     answer: "بالتأكيد، نرتب زيارات ميدانية لمعاينة العقارات التي تناسب متطلباتك. يمكنك معاينة العقار عدة مرات قبل اتخاذ قرار الشراء.",
   },
   {
-    question: "هل تساعدون في التمويل العقاري؟",
+    question: "هل تساعدون في التمويل الشخصي؟",
     answer: "نعم، نقدم خدمات استشارية للتمويل العقاري ونساعدك في التواصل مع جهات التمويل المعتمدة. جميع الخدمات تخضع للدراسة الائتمانية.",
   },
   {
@@ -119,7 +119,7 @@ const faqItems = [
 
 export default function ReadyProperties() {
   const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن العقارات الجاهزة للتملك");
-  const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
 
   return (
     <Layout>
@@ -129,7 +129,7 @@ export default function ReadyProperties() {
         description="نوفر لك تشكيلة واسعة من العقارات الجاهزة للتملك في أفضل المواقع، مع فحص شامل وضمان سلامة جميع الإجراءات القانونية."
         image={serviceImage}
         primaryCTA={{ text: "تصفح العقارات المتاحة", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966551535955" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966567597514" }}
         variant="service"
       />
 
@@ -150,7 +150,7 @@ export default function ReadyProperties() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -386,7 +386,7 @@ export default function ReadyProperties() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن
