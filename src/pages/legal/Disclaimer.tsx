@@ -35,7 +35,7 @@ export default function Disclaimer() {
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">2. الخدمات التمويلية</h2>
             <p className="text-muted-foreground mb-4">
-              فيما يتعلق بخدمات التمويل العقاري والخدمات المالية الأخرى:
+              فيما يتعلق بخدمات التمويل الشخصي والخدمات المالية الأخرى:
             </p>
             <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
               <li>جميع طلبات التمويل تخضع للدراسة الائتمانية من قبل الجهات المختصة.</li>
@@ -44,9 +44,9 @@ export default function Disclaimer() {
               <li>العقود النهائية هي التي تحدد الشروط الملزمة.</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">3. الاستثمار العقاري</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">3. إعادة هيكلة القروض</h2>
             <p className="text-muted-foreground mb-4">
-              فيما يتعلق بفرص الاستثمار العقاري:
+              فيما يتعلق بفرص إعادة هيكلة القروض:
             </p>
             <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
               <li>العوائد الاستثمارية المتوقعة غير مضمونة.</li>

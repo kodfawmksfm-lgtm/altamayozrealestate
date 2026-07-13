@@ -6,12 +6,12 @@ const complianceAreas = [
   {
     icon: Building2,
     title: "البنك المركزي السعودي (ساما)",
-    description: "نلتزم بجميع أنظمة ولوائح البنك المركزي السعودي المتعلقة بالتمويل العقاري والوساطة المالية.",
+    description: "نلتزم بجميع أنظمة ولوائح البنك المركزي السعودي المتعلقة بالتمويل الشخصي والوساطة المالية.",
   },
   {
     icon: Scale,
     title: "هيئة السوق المالية",
-    description: "نتبع إرشادات هيئة السوق المالية في جميع الأنشطة المتعلقة بالاستثمار العقاري.",
+    description: "نتبع إرشادات هيئة السوق المالية في جميع الأنشطة المتعلقة بإعادة هيكلة القروض.",
   },
   {
     icon: Shield,
@@ -41,7 +41,7 @@ export default function Compliance() {
             
             <div className="bg-trust/10 rounded-xl p-6 mb-12">
               <p className="text-foreground text-center">
-                تلتزم شركة خطوة الثروة للعقارات بأعلى معايير الامتثال التنظيمي، وتعمل وفقاً 
+                تلتزم مكتب تمكين للحلول التمويلية بأعلى معايير الامتثال التنظيمي، وتعمل وفقاً 
                 لجميع الأنظمة واللوائح المعتمدة في المملكة العربية السعودية.
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function Compliance() {
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. التزاماتنا التنظيمية</h2>
             <p className="text-muted-foreground mb-4">
-              نلتزم في شركة خطوة الثروة للعقارات بـ:
+              نلتزم في مكتب تمكين للحلول التمويلية بـ:
             </p>
             <ul className="list-disc list-inside text-muted-foreground mb-4 space-y-2">
               <li>الحصول على جميع التراخيص والتصاريح اللازمة لممارسة أنشطتنا.</li>
@@ -145,7 +145,7 @@ export default function Compliance() {
               لأي استفسارات حول سياسات الامتثال:
             </p>
             <ul className="list-none text-muted-foreground mb-4 space-y-2">
-              <li>الهاتف: +966 55 153 5955</li>
+              <li>الهاتف: +966 56 759 7514</li>
               <li>العنوان: 3061 – 8091 شارع بحر العرب – حي الخليج – الرياض 13224</li>
             </ul>
 

@@ -120,7 +120,7 @@ const faqItems = [
 
 export default function RealEstateDevelopment() {
   const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدمة التطوير العقاري");
-  const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
 
   return (
     <Layout>
@@ -130,7 +130,7 @@ export default function RealEstateDevelopment() {
         description="نقدم خدمات تطوير عقاري متكاملة من التصميم إلى التسليم، مع التزام تام بالجودة والمواعيد، وإشراف هندسي متخصص على جميع مراحل المشروع."
         image={developmentImage}
         primaryCTA={{ text: "احصل على استشارة مجانية", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966551535955" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966567597514" }}
         variant="service"
       />
 
@@ -151,7 +151,7 @@ export default function RealEstateDevelopment() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -387,7 +387,7 @@ export default function RealEstateDevelopment() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

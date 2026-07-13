@@ -10,7 +10,7 @@ import service2 from "@/assets/service-development.png";
 
 const categories = [
   { name: "الكل", value: "all", count: 12 },
-  { name: "التمويل العقاري", value: "financing", count: 4 },
+  { name: "التمويل الشخصي", value: "financing", count: 4 },
   { name: "الاستثمار", value: "investment", count: 3 },
   { name: "نصائح عقارية", value: "tips", count: 3 },
   { name: "أخبار السوق", value: "news", count: 2 },
@@ -20,11 +20,11 @@ const featuredPost = {
   id: 1,
   title: "دليلك الشامل للتمويل العقاري الكاش في السعودية 2024",
   excerpt: "تعرف على كيفية تحويل قرضك العقاري إلى سيولة نقدية بطريقة نظامية ومتوافقة مع أنظمة البنك المركزي السعودي (ساما). نشرح لك الخطوات والشروط والمستندات المطلوبة.",
-  category: "التمويل العقاري",
+  category: "التمويل الشخصي",
   image: service1,
   date: "15 يناير 2024",
   readTime: "8 دقائق",
-  author: "فريق خطوة الثروة",
+  author: "فريق تمكين",
   slug: "complete-guide-cash-financing-2024",
 };
 
@@ -49,7 +49,7 @@ const posts = [
     image: service2,
     date: "5 يناير 2024",
     readTime: "5 دقائق",
-    author: "فريق خطوة الثروة",
+    author: "فريق تمكين",
     slug: "steps-buying-property",
     icon: Home,
   },
@@ -67,9 +67,9 @@ const posts = [
   },
   {
     id: 5,
-    title: "كيف تختار التمويل العقاري المناسب؟",
+    title: "كيف تختار التمويل الشخصي المناسب؟",
     excerpt: "مقارنة شاملة بين خيارات التمويل المتاحة في السوق السعودي وكيفية اختيار الأنسب لك.",
-    category: "التمويل العقاري",
+    category: "التمويل الشخصي",
     image: service1,
     date: "28 ديسمبر 2023",
     readTime: "6 دقائق",
@@ -79,7 +79,7 @@ const posts = [
   },
   {
     id: 6,
-    title: "أخطاء شائعة عند الاستثمار العقاري وكيف تتجنبها",
+    title: "أخطاء شائعة عند إعادة هيكلة القروض وكيف تتجنبها",
     excerpt: "تعلم من أخطاء الآخرين واحمِ استثمارك من المخاطر الشائعة في السوق العقاري.",
     category: "الاستثمار",
     image: service2,

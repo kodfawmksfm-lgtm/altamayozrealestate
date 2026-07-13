@@ -4,61 +4,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* خطوة الثروة للعقارات - نظام التصميم */
+/* تمكين للحلول التمويلية - نظام التصميم */
 
 @layer base {
   :root {
-    /* الأساسي - ذهبي فاخر #D4A017 */
-    --primary: 43 86% 47%;
-    --primary-foreground: 0 0% 11%;
+    /* الأساسي - أزرق تمكين */
+    --primary: 220 85% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    /* الذهبي */
-    --gold: 43 86% 47%;
-    --gold-foreground: 0 0% 11%;
+    /* اللون المميز (نستخدم اسم gold للتوافق) - أزرق ساطع */
+    --gold: 218 92% 55%;
+    --gold-foreground: 0 0% 100%;
 
-    /* الثقة */
-    --trust: 142 50% 28%;
+    /* الثقة - أخضر */
+    --trust: 142 55% 32%;
     --trust-foreground: 0 0% 100%;
 
-    /* الخلفية - أبيض نقي */
+    /* الخلفية - أبيض */
     --background: 0 0% 100%;
-    --foreground: 0 0% 13%;
+    --foreground: 230 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
+    --card-foreground: 230 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
+    --popover-foreground: 230 40% 12%;
 
-    /* الثانوي - أسود فاخر #1B1B1B */
-    --secondary: 0 0% 11%;
+    /* الثانوي - كحلي عميق (هوية تمكين) */
+    --secondary: 230 55% 14%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 220 25% 96%;
+    --muted-foreground: 230 15% 40%;
 
-    /* التمييز #F5F5F5 */
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 13%;
+    --accent: 220 30% 96%;
+    --accent-foreground: 230 40% 12%;
 
     --destructive: 0 84% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 92%;
-    --ring: 43 86% 47%;
+    --border: 220 20% 90%;
+    --input: 220 20% 92%;
+    --ring: 218 92% 55%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 11%;
+    --sidebar-background: 230 55% 14%;
     --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 43 86% 47%;
-    --sidebar-primary-foreground: 0 0% 11%;
-    --sidebar-accent: 0 0% 18%;
+    --sidebar-primary: 218 92% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 40% 20%;
     --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 0 0% 22%;
-    --sidebar-ring: 43 86% 47%;
+    --sidebar-border: 230 30% 25%;
+    --sidebar-ring: 218 92% 55%;
   }
+
 
   .dark {
     --primary: 43 86% 52%;

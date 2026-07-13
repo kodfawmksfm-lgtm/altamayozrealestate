@@ -118,18 +118,18 @@ const faqItems = [
 ];
 
 export default function ExclusiveMarketing() {
-  const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدمة التسويق العقاري الحصري");
-  const whatsappLink = `https://wa.me/966551535955?text=${whatsappMessage}`;
+  const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدمة متابعة الطلبات الحصري");
+  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
 
   return (
     <Layout>
       <HeroSection
-        title="التسويق العقاري الحصري"
+        title="متابعة الطلبات الحصري"
         subtitle="نوصل عقارك للمشتري المناسب"
         description="نقدم خدمات تسويق عقاري احترافية ومتكاملة، مع تصوير عالي الجودة وحملات مستهدفة للوصول إلى العملاء المهتمين وتحقيق أفضل قيمة لعقارك."
         image={serviceImage}
         primaryCTA={{ text: "سوّق عقارك الآن", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966551535955" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966567597514" }}
         variant="service"
       />
 
@@ -150,7 +150,7 @@ export default function ExclusiveMarketing() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -221,7 +221,7 @@ export default function ExclusiveMarketing() {
             <div className="relative">
               <img 
                 src={serviceImage} 
-                alt="التسويق العقاري" 
+                alt="متابعة الطلبات" 
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-trust text-white p-4 rounded-xl shadow-lg">
@@ -341,7 +341,7 @@ export default function ExclusiveMarketing() {
           <FAQSection
             items={faqItems}
             title="الأسئلة الشائعة عن التسويق الحصري"
-            description="إجابات على أكثر الأسئلة شيوعاً حول خدمات التسويق العقاري"
+            description="إجابات على أكثر الأسئلة شيوعاً حول خدمات متابعة الطلبات"
           />
         </div>
       </section>
@@ -386,7 +386,7 @@ export default function ExclusiveMarketing() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966551535955">
+              <a href="tel:+966567597514">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن
