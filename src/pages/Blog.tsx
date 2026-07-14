@@ -3,91 +3,88 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, User, TrendingUp, Home, Building2, Banknote } from "lucide-react";
-import heroImage from "@/assets/hero-main.png";
-import service1 from "@/assets/financing.png";
-import service2 from "@/assets/service-development.png";
+import { Calendar, Clock, ArrowLeft, User, Wallet, Repeat, ShieldCheck, FileSearch } from "lucide-react";
+import hero from "@/assets/financing.png";
+import img1 from "@/assets/service-development.png";
+import img2 from "@/assets/service-1.png";
+import img3 from "@/assets/service-4.png";
+import img4 from "@/assets/service-10.png";
+import img5 from "@/assets/ad-design.png";
 
 const categories = [
-  { name: "الكل", value: "all", count: 12 },
-  { name: "التمويل الشخصي", value: "financing", count: 4 },
-  { name: "الاستثمار", value: "investment", count: 3 },
-  { name: "نصائح عقارية", value: "tips", count: 3 },
-  { name: "أخبار السوق", value: "news", count: 2 },
+  { name: "الكل", value: "all", count: 6 },
+  { name: "التمويل الشخصي", value: "financing", count: 2 },
+  { name: "سداد القروض", value: "repayment", count: 2 },
+  { name: "حلول المتعثرين", value: "distressed", count: 1 },
+  { name: "دراسة الأهلية", value: "eligibility", count: 1 },
 ];
 
 const featuredPost = {
-  id: 1,
-  title: "دليلك الشامل للتمويل العقاري الكاش في السعودية 2024",
-  excerpt: "تعرف على كيفية تحويل قرضك العقاري إلى سيولة نقدية بطريقة نظامية ومتوافقة مع أنظمة البنك المركزي السعودي (ساما). نشرح لك الخطوات والشروط والمستندات المطلوبة.",
+  title: "دليلك العملي لطلب تمويل شخصي عبر وسيط مرخّص في 2026",
+  excerpt:
+    "كيف يعمل الوسيط التمويلي، وما الفرق بينه وبين جهة الإقراض؟ خطوات تقديم الطلب، المستندات المطلوبة، ومعايير التحقق من الأهلية وفق أنظمة البنك المركزي السعودي.",
   category: "التمويل الشخصي",
-  image: service1,
-  date: "15 يناير 2024",
+  image: hero,
+  date: "10 يوليو 2026",
   readTime: "8 دقائق",
   author: "فريق تمكين",
-  slug: "complete-guide-cash-financing-2024",
 };
 
 const posts = [
   {
-    id: 2,
-    title: "أفضل 5 مناطق للاستثمار العقاري في الرياض",
-    excerpt: "اكتشف المناطق الأكثر نمواً في الرياض والتي توفر فرصاً استثمارية واعدة مع عوائد مجزية.",
-    category: "الاستثمار",
-    image: heroImage,
-    date: "10 يناير 2024",
+    title: "سداد القروض القائمة: متى تكون إعادة الهيكلة قراراً صائباً؟",
+    excerpt:
+      "مؤشرات عملية لتقييم قرارك بشأن سداد قرضك القائم أو إعادة جدولته، مع شرح تأثير كل خيار على التزامك الشهري ومعدل النسبة السنوية (APR).",
+    category: "سداد القروض",
+    image: img1,
+    date: "5 يوليو 2026",
     readTime: "6 دقائق",
-    author: "خبراء العقار",
-    slug: "best-investment-areas-riyadh",
-    icon: TrendingUp,
+    author: "فريق تمكين",
+    icon: Repeat,
   },
   {
-    id: 3,
-    title: "خطوات شراء عقار جاهز بنجاح",
-    excerpt: "نصائح عملية ومهمة يجب مراعاتها قبل شراء عقارك الجديد لتجنب الأخطاء الشائعة.",
-    category: "نصائح عقارية",
-    image: service2,
-    date: "5 يناير 2024",
+    title: "كيف تُحسب أهليتك التمويلية؟ العوامل الأربعة الأهم",
+    excerpt:
+      "الدخل الشهري، نسبة الاستقطاع، السجل الائتماني (سمة)، ونوع القطاع — نشرح كل عامل وكيف يؤثر على قرار الجهة الممولة.",
+    category: "دراسة الأهلية",
+    image: img2,
+    date: "28 يونيو 2026",
+    readTime: "7 دقائق",
+    author: "مستشارون ماليون",
+    icon: FileSearch,
+  },
+  {
+    title: "المتعثرات وإيقاف الخدمات: خيارات نظامية لاستعادة استقرارك المالي",
+    excerpt:
+      "دور الوسيط في دراسة حالتك وترتيب حلول تسوية مع الجهات الممولة المرخّصة، ضمن الأنظمة السعودية ودون وعود مضمونة قبل التحقق.",
+    category: "حلول المتعثرين",
+    image: img3,
+    date: "20 يونيو 2026",
+    readTime: "6 دقائق",
+    author: "فريق تمكين",
+    icon: ShieldCheck,
+  },
+  {
+    title: "قرض جديد بعد سداد القرض القائم: ما الذي يجب أن تعرفه؟",
+    excerpt:
+      "متى يمكن تقديم طلب تمويل جديد بعد إغلاق قرض سابق، وما شروط الاستقطاع من الدخل، وكيف تُقيّم الجهة الممولة القدرة على السداد.",
+    category: "التمويل الشخصي",
+    image: img4,
+    date: "12 يونيو 2026",
     readTime: "5 دقائق",
     author: "فريق تمكين",
-    slug: "steps-buying-property",
-    icon: Home,
+    icon: Wallet,
   },
   {
-    id: 4,
-    title: "مستقبل السوق العقاري السعودي في 2024",
-    excerpt: "تحليل شامل لتوقعات السوق العقاري وأهم المؤشرات والفرص المتاحة للمستثمرين.",
-    category: "أخبار السوق",
-    image: heroImage,
-    date: "1 يناير 2024",
-    readTime: "7 دقائق",
-    author: "محللون اقتصاديون",
-    slug: "saudi-real-estate-market-2024",
-    icon: Building2,
-  },
-  {
-    id: 5,
-    title: "كيف تختار التمويل الشخصي المناسب؟",
-    excerpt: "مقارنة شاملة بين خيارات التمويل المتاحة في السوق السعودي وكيفية اختيار الأنسب لك.",
-    category: "التمويل الشخصي",
-    image: service1,
-    date: "28 ديسمبر 2023",
-    readTime: "6 دقائق",
-    author: "مستشارون ماليون",
-    slug: "choosing-right-financing",
-    icon: Banknote,
-  },
-  {
-    id: 6,
-    title: "أخطاء شائعة عند إعادة هيكلة القروض وكيف تتجنبها",
-    excerpt: "تعلم من أخطاء الآخرين واحمِ استثمارك من المخاطر الشائعة في السوق العقاري.",
-    category: "الاستثمار",
-    image: service2,
-    date: "20 ديسمبر 2023",
+    title: "الفرق بين معدل النسبة السنوي (APR) وهامش الربح الشهري",
+    excerpt:
+      "لماذا تعتمد جهات التمويل على مؤشر APR للإفصاح؟ وكيف يساعدك على مقارنة العروض التمويلية بشفافية قبل التوقيع.",
+    category: "سداد القروض",
+    image: img5,
+    date: "3 يونيو 2026",
     readTime: "5 دقائق",
-    author: "خبراء العقار",
-    slug: "common-investment-mistakes",
-    icon: TrendingUp,
+    author: "مستشارون ماليون",
+    icon: Repeat,
   },
 ];
 
@@ -95,38 +92,39 @@ export default function Blog() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 md:py-24">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-20">
         <div className="container-rtl">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-              المدونة العقارية
+              المدونة التمويلية
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              أحدث المقالات والنصائح العقارية
+            <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
+              مقالات ونصائح حول التمويل وسداد القروض
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              استكشف مقالاتنا المتخصصة في عالم العقارات السعودية. نقدم لك أحدث الأخبار، النصائح المهنية، 
-              وتحليلات السوق لمساعدتك في اتخاذ قرارات استثمارية ذكية.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              محتوى عملي حول التمويل الشخصي، سداد القروض القائمة، حلول المتعثرين ودراسة الأهلية — بأسلوب واضح ومتوافق مع أنظمة البنك المركزي السعودي.
+              <br />
+              <span className="text-xs text-muted-foreground/80">تمكين وسيط تمويلي، ولا يُقدّم إقراضاً مباشراً.</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-8 border-b border-border bg-card">
+      <section className="py-6 border-b border-border bg-card sticky top-16 z-10">
         <div className="container-rtl">
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             {categories.map((category) => (
               <button
                 key={category.value}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all ${
                   category.value === "all"
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
               >
                 {category.name}
-                <span className="mr-2 text-xs opacity-70">({category.count})</span>
+                <span className="mr-1.5 text-[10px] opacity-70">({category.count})</span>
               </button>
             ))}
           </div>
@@ -142,37 +140,31 @@ export default function Blog() {
                 <img
                   src={featuredPost.image}
                   alt={featuredPost.title}
+                  loading="lazy"
+                  width={1024}
+                  height={1024}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-8 md:p-12 flex flex-col justify-center">
-                <Badge className="w-fit mb-4 bg-gold/10 text-gold">
-                  {featuredPost.category}
-                </Badge>
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
+              <CardContent className="p-6 md:p-12 flex flex-col justify-center">
+                <Badge className="w-fit mb-4 bg-gold/10 text-gold">{featuredPost.category}</Badge>
+                <h2 className="text-xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
                   {featuredPost.title}
                 </h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-sm md:text-base">
                   {featuredPost.excerpt}
                 </p>
-                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
-                  <span className="flex items-center gap-1">
-                    <User className="w-4 h-4" />
-                    {featuredPost.author}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {featuredPost.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {featuredPost.readTime}
-                  </span>
+                <div className="flex flex-wrap items-center gap-4 text-xs md:text-sm text-muted-foreground mb-6">
+                  <span className="flex items-center gap-1"><User className="w-4 h-4" />{featuredPost.author}</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" />{featuredPost.date}</span>
+                  <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{featuredPost.readTime}</span>
                 </div>
-                <Button className="btn-primary w-fit group">
-                  اقرأ المقال كاملاً
-                  <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-                </Button>
+                <Link to="/financing-request">
+                  <Button className="btn-primary w-fit group">
+                    اطلب دراسة أهليتك مجاناً
+                    <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
+                  </Button>
+                </Link>
               </CardContent>
             </div>
           </Card>
@@ -182,57 +174,39 @@ export default function Blog() {
       {/* Posts Grid */}
       <section className="section-padding bg-muted/30">
         <div className="container-rtl">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-foreground">أحدث المقالات</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">أحدث المقالات</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {posts.map((post) => (
-              <Card key={post.id} className="overflow-hidden card-hover group">
+              <Card key={post.title} className="overflow-hidden card-hover group flex flex-col">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.title}
+                    loading="lazy"
+                    width={1024}
+                    height={1024}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <Badge className="absolute top-4 right-4 bg-card/90 text-foreground">
+                  <Badge className="absolute top-3 right-3 bg-card/90 text-foreground text-[11px]">
                     {post.category}
                   </Badge>
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {post.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {post.readTime}
-                    </span>
+                <CardContent className="p-5 flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 text-[11px] text-muted-foreground mb-2">
+                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>
+                    <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{post.readTime}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-base md:text-lg font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  <Link 
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                  >
-                    اقرأ المزيد
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-1">{post.excerpt}</p>
+                  <Link to="/financing-request" className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+                    ابدأ طلبك الآن
                     <ArrowLeft className="w-4 h-4 mr-1" />
                   </Link>
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              عرض المزيد من المقالات
-              <ArrowLeft className="w-4 h-4 mr-2" />
-            </Button>
           </div>
         </div>
       </section>
@@ -240,19 +214,15 @@ export default function Blog() {
       {/* CTA Section */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-rtl text-center">
-          <h2 className="text-3xl font-bold mb-4">هل لديك سؤال عقاري؟</h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            فريقنا من الخبراء جاهز للإجابة على جميع استفساراتك وتقديم المشورة المهنية
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">جاهز لتقديم طلبك؟</h2>
+          <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto text-sm md:text-base">
+            ابدأ بدراسة أهليتك مجاناً عبر تمكين — وسيط تمويلي يعمل ضمن الأنظمة السعودية. لا وعود مضمونة قبل التحقق، وموافقة الجهة الممولة هي القرار النهائي.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link to="/financing-request"><Button className="btn-gold w-full sm:w-auto">اطلب دراسة أهليتك</Button></Link>
             <Link to="/contact">
-              <Button className="btn-gold">
-                تواصل معنا الآن
-              </Button>
-            </Link>
-            <Link to="/faq">
-              <Button variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
-                الأسئلة الشائعة
+              <Button variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
+                تواصل معنا
               </Button>
             </Link>
           </div>
