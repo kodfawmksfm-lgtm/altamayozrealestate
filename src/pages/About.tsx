@@ -26,8 +26,8 @@ const values = [
   },
   {
     icon: Award,
-    title: "التميز والجودة",
-    description: "نسعى دائماً لتقديم أفضل الخدمات بجودة عالية تتجاوز توقعات عملائنا",
+    title: "الجودة والاحترافية",
+    description: "نلتزم بمعايير عمل مدروسة وجودة عالية في كل خطوة من مسار طلبك التمويلي",
   },
   {
     icon: Users,
@@ -153,7 +153,7 @@ const About = () => {
             <div>
               <Badge className="mb-4 bg-primary/10 text-primary">قصتنا</Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                رحلة من الخبرة والتميز
+                رحلة من الخبرة والاحترافية
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 بدأت مكتب تمكين للحلول التمويلية رحلتها في سوق العقارات السعودي بهدف واضح: 
@@ -165,7 +165,7 @@ const About = () => {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 اليوم، نفخر بأن نكون من الشركات الرائدة في مجال الحلول التمويلية المتكاملة في الرياض، 
-                ونواصل السعي نحو التميز في كل خدمة نقدمها.
+                ونواصل السعي نحو الأفضل في كل خدمة نقدمها.
               </p>
             </div>
 
