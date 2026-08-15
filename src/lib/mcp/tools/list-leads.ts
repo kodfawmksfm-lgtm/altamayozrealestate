@@ -1,0 +1,30 @@
+import { defineTool } from "@lovable.dev/mcp-js";
+import { z } from "zod";
+import { supabaseForUser } from "../supabase";
+
+export default defineTool({
+  name: "list_leads",
+  title: "List leads",
+  description:
+    "List website contact leads (name, phone, service, message) for Tamkeen. Requires an admin or staff account.",
+  inputSchema: {
+    limit: z.number().int().describe("Maximum number of leads to return (default 20)."),
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ limit }, ctx) => {
+    if (!ctx.isAuthenticated()) {
+      return { content: [{ type: "text", text: "Not authenticated" }], isError: true };
+    }
+    const take = Math.min(Math.max(limit ?? 20, 1), 100);
+    const { data, error } = await supabaseForUser(ctx)
+      .from("leads")
+      .select("id, name, phone, email, service, message, source, created_at")
+      .order("created_at", { ascending: false })
+      .limit(take);
+    if (error) return { content: [{ type: "text", text: error.message }], isError: true };
+    return {
+      content: [{ type: "text", text: JSON.stringify(data ?? []) }],
+      structuredContent: { leads: data ?? [] },
+    };
+  },
+});

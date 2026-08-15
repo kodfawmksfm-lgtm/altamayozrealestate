@@ -24,6 +24,8 @@ import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import Disclaimer from "./pages/legal/Disclaimer";
 import Compliance from "./pages/legal/Compliance";
 import CookiesPolicy from "./pages/legal/CookiesPolicy";
+import Auth from "./pages/Auth";
+import OAuthConsent from "./pages/OAuthConsent";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +56,8 @@ const App = () => (
             <Route path="/legal/disclaimer" element={<Disclaimer />} />
             <Route path="/legal/compliance" element={<Compliance />} />
             <Route path="/legal/cookies" element={<CookiesPolicy />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
