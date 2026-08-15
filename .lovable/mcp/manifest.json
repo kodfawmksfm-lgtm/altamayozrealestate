@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://frmpmfgnveptwieizwob.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "tamkeen-mcp",
+      "version": "0.1.0",
+      "title": "Tamkeen Financing MCP"
+    },
+    "tools": [
+      {
+        "name": "get_service_info",
+        "title": "Get service info",
+        "description": "Return public information about Tamkeen's financing services, contact channels, and the regulatory disclaimer.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_leads",
+        "title": "List leads",
+        "description": "List website contact leads (name, phone, service, message) for Tamkeen. Requires an admin or staff account.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "description": "Maximum number of leads to return (default 20)."
+            }
+          },
+          "required": [
+            "limit"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_financing_requests",
+        "title": "List financing requests",
+        "description": "List submitted financing requests (applicant, city, salary, obligations, status). Sensitive data: requires an admin or staff account.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "description": "Maximum number of requests to return (default 20)."
+            },
+            "status": {
+              "type": "string",
+              "description": "Optional status filter, e.g. 'new'. Use an empty string for all."
+            }
+          },
+          "required": [
+            "limit",
+            "status"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_pipeline_stats",
+        "title": "Get pipeline stats",
+        "description": "Summarize how many leads and financing requests were received in the last N days. Requires an admin or staff account.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "days": {
+              "type": "integer",
+              "description": "Look-back window in days (default 30)."
+            }
+          },
+          "required": [
+            "days"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
