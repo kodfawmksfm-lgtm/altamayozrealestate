@@ -59,7 +59,7 @@ function supabaseForUser(ctx) {
 var list_leads_default = defineTool({
   name: "list_leads",
   title: "List leads",
-  description: "List website contact leads (name, phone, service, message) for Tamkeen. Requires an admin or staff account.",
+  description: "List website contact leads (name, phone, service, message) for Syola Build. Requires an admin or staff account.",
   inputSchema: {
     limit: z.number().int().describe("Maximum number of leads to return (default 20).")
   },
@@ -168,7 +168,7 @@ var INFO = {
 var get_service_info_default = defineTool4({
   name: "get_service_info",
   title: "Get service info",
-  description: "Return public information about Tamkeen's financing services, contact channels, and the regulatory disclaimer.",
+  description: "Return public information about Syola Build's real-estate financing services, contact channels, and the regulatory disclaimer.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

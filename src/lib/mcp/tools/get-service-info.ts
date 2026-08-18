@@ -25,7 +25,7 @@ export default defineTool({
   name: "get_service_info",
   title: "Get service info",
   description:
-    "Return public information about Tamkeen's financing services, contact channels, and the regulatory disclaimer.",
+    "Return public information about Syola Build's real-estate financing services, contact channels, and the regulatory disclaimer.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
