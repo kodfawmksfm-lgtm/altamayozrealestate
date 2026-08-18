@@ -52,7 +52,7 @@ export function Header() {
               className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-md transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:block">
-              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">تمكين</h1>
+              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">سيولة البناء والسداد</h1>
               <p className="text-[10px] md:text-xs text-muted-foreground">للحلول التمويلية</p>
             </div>
           </Link>

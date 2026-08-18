@@ -11,9 +11,9 @@
   },
   "mcp": {
     "server": {
-      "name": "tamkeen-mcp",
+      "name": "syolabuild-mcp",
       "version": "0.1.0",
-      "title": "Tamkeen Financing MCP"
+      "title": "Syola Build Financing MCP"
     },
     "tools": [
       {

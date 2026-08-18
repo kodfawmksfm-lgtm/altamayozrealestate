@@ -180,8 +180,8 @@ var get_service_info_default = defineTool4({
 // src/lib/mcp/index.ts
 var projectRef = "frmpmfgnveptwieizwob";
 var mcp_default = defineMcp({
-  name: "tamkeen-mcp",
-  title: "Tamkeen Financing MCP",
+  name: "syolabuild-mcp",
+  title: "Syola Build Financing MCP",
   version: "0.1.0",
   instructions: "Tools for \u0634\u0631\u0643\u0629 \u0633\u064A\u0648\u0644\u0629 \u0627\u0644\u0628\u0646\u0627\u0621 \u0648\u0627\u0644\u0633\u062F\u0627\u062F (a financing broker in Saudi Arabia). Use `get_service_info` for public service, contact and compliance details. Use `list_leads`, `list_financing_requests` and `get_pipeline_stats` to review submissions \u2014 these require an admin or staff account and return sensitive applicant data, so handle it confidentially.",
   auth: auth.oauth.issuer({

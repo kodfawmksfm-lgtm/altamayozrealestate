@@ -71,10 +71,10 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-5 group">
               <div className="w-14 h-14 bg-background/10 rounded-lg p-1.5 flex items-center justify-center">
-                <img src={logo.url} alt="شعار تمكين" width={48} height={48} className="w-full h-full object-contain rounded" />
+                <img src={logo.url} alt="شعار سيولة البناء والسداد" width={48} height={48} className="w-full h-full object-contain rounded" />
               </div>
               <div>
-                <h3 className="text-lg font-bold leading-tight">تمكين</h3>
+                <h3 className="text-lg font-bold leading-tight">سيولة البناء والسداد</h3>
                 <p className="text-xs text-secondary-foreground/70">للحلول التمويلية</p>
               </div>
             </Link>
