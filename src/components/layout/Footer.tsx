@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowUp, Sparkles, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowUp, Sparkles, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/syolabuild-logo.png.asset.json";
 
@@ -84,7 +84,8 @@ export function Footer() {
             </p>
 
             <div className="space-y-1.5 text-xs text-secondary-foreground/70">
-              <p className="flex items-center gap-2"><ShieldCheck className="w-3.5 h-3.5 text-gold" /> مرخّص وخاضع لرقابة الجهات المختصة في المملكة</p>
+              <p className="flex items-center gap-2"><ShieldCheck className="w-3.5 h-3.5 text-gold" /> شركة ذات مسؤولية محدودة — سجل تجاري نشط</p>
+              <p className="flex items-center gap-2"><ShieldCheck className="w-3.5 h-3.5 text-gold" /> الرقم الوطني الموحد: 7054954552</p>
             </div>
             <div className="flex gap-2 mt-5">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#25D366] rounded-md flex items-center justify-center hover:opacity-90 transition" aria-label="واتساب">
