@@ -85,7 +85,7 @@ const testimonials = [
   {
     name: "أحمد السعود",
     role: "رجل أعمال",
-    content: "تعاملت مع مكتب تمكين وكانت التجربة ممتازة. إجراءات سريعة وشفافية تامة.",
+    content: "تعاملت مع شركة سيولة البناء والسداد وكانت التجربة ممتازة. إجراءات سريعة وشفافية تامة.",
     rating: 5,
   },
   {
@@ -121,7 +121,7 @@ const faqItems = [
 
 export default function CashFinancing() {
   const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدمة التمويل الشخصي الكاش");
-  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966553558587?text=${whatsappMessage}`;
 
   return (
     <Layout>
@@ -131,7 +131,7 @@ export default function CashFinancing() {
         description="نقدم لك حلولاً مالية مرنة لتحويل قرضك العقاري إلى سيولة نقدية فورية، مع إجراءات سريعة وشفافية تامة، وكل ذلك وفقاً للأنظمة السعودية المعتمدة."
         image={financingImage}
         primaryCTA={{ text: "احصل على استشارة مجانية", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966567597514" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966553558587" }}
         variant="service"
       />
 
@@ -152,7 +152,7 @@ export default function CashFinancing() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -388,7 +388,7 @@ export default function CashFinancing() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

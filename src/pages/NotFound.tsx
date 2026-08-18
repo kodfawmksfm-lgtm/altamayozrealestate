@@ -5,7 +5,7 @@ import { Home, ArrowRight, MessageCircle, Phone, Search } from "lucide-react";
 
 const NotFound = () => {
   const whatsappMessage = encodeURIComponent("مرحباً، أحتاج مساعدة في إيجاد ما أبحث عنه");
-  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966553558587?text=${whatsappMessage}`;
 
   return (
     <Layout>
@@ -58,7 +58,7 @@ const NotFound = () => {
                     <span className="animate-pulse">⚡</span>
                   </Button>
                 </a>
-                <a href="tel:+966567597514">
+                <a href="tel:+966553558587">
                   <Button size="sm" variant="outline" className="gap-2 w-full sm:w-auto">
                     <Phone className="w-4 h-4" />
                     <span dir="ltr">056 759 7514</span>

@@ -82,7 +82,7 @@ export function HeroSection({
                 </Link>
               )}
               {secondaryCTA && (
-                <a href={`tel:+966567597514`}>
+                <a href={`tel:+966553558587`}>
                   <Button variant="outline" className="text-lg px-8 py-6 w-full sm:w-auto bg-primary-foreground/10 text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/20">
                     <Phone className="w-5 h-5 ml-2" />
                     {secondaryCTA.text}

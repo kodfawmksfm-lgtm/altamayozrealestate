@@ -59,7 +59,7 @@ function supabaseForUser(ctx) {
 var list_leads_default = defineTool({
   name: "list_leads",
   title: "List leads",
-  description: "List website contact leads (name, phone, service, message) for Tamkeen. Requires an admin or staff account.",
+  description: "List website contact leads (name, phone, service, message) for Syola Build. Requires an admin or staff account.",
   inputSchema: {
     limit: z.number().int().describe("Maximum number of leads to return (default 20).")
   },
@@ -147,12 +147,12 @@ var get_stats_default = defineTool3({
 // src/lib/mcp/tools/get-service-info.ts
 import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.26.2";
 var INFO = {
-  company: "\u0645\u0643\u062A\u0628 \u062A\u0645\u0643\u064A\u0646 \u0644\u0644\u062D\u0644\u0648\u0644 \u0627\u0644\u062A\u0645\u0648\u064A\u0644\u064A\u0629",
+  company: "\u0634\u0631\u0643\u0629 \u0633\u064A\u0648\u0644\u0629 \u0627\u0644\u0628\u0646\u0627\u0621 \u0648\u0627\u0644\u0633\u062F\u0627\u062F",
   role: "\u0648\u0633\u064A\u0637 \u062A\u0645\u0648\u064A\u0644\u064A \u0648\u0644\u064A\u0633 \u062C\u0647\u0629 \u062A\u0645\u0648\u064A\u0644 \u0623\u0648 \u0625\u0642\u0631\u0627\u0636 \u0645\u0628\u0627\u0634\u0631\u0629",
-  whatsapp: "+966567597514",
-  phone: "+966567597514",
-  instagram: "https://www.instagram.com/tamkeen_saudi",
-  snapchat: "https://www.snapchat.com/add/tamkeen_sa",
+  whatsapp: "+966553558587",
+  phone: "+966553558587",
+  instagram: "https://syolabuild.com",
+  snapchat: "https://syolabuild.com",
   financing_range_sar: { min: 18e3, max: 3e5 },
   max_tenor_months: 60,
   apr_from_percent: 1.5,
@@ -168,7 +168,7 @@ var INFO = {
 var get_service_info_default = defineTool4({
   name: "get_service_info",
   title: "Get service info",
-  description: "Return public information about Tamkeen's financing services, contact channels, and the regulatory disclaimer.",
+  description: "Return public information about Syola Build's real-estate financing services, contact channels, and the regulatory disclaimer.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -180,10 +180,10 @@ var get_service_info_default = defineTool4({
 // src/lib/mcp/index.ts
 var projectRef = "frmpmfgnveptwieizwob";
 var mcp_default = defineMcp({
-  name: "tamkeen-mcp",
-  title: "Tamkeen Financing MCP",
+  name: "syolabuild-mcp",
+  title: "Syola Build Financing MCP",
   version: "0.1.0",
-  instructions: "Tools for \u0645\u0643\u062A\u0628 \u062A\u0645\u0643\u064A\u0646 \u0644\u0644\u062D\u0644\u0648\u0644 \u0627\u0644\u062A\u0645\u0648\u064A\u0644\u064A\u0629 (a financing broker in Saudi Arabia). Use `get_service_info` for public service, contact and compliance details. Use `list_leads`, `list_financing_requests` and `get_pipeline_stats` to review submissions \u2014 these require an admin or staff account and return sensitive applicant data, so handle it confidentially.",
+  instructions: "Tools for \u0634\u0631\u0643\u0629 \u0633\u064A\u0648\u0644\u0629 \u0627\u0644\u0628\u0646\u0627\u0621 \u0648\u0627\u0644\u0633\u062F\u0627\u062F (a financing broker in Saudi Arabia). Use `get_service_info` for public service, contact and compliance details. Use `list_leads`, `list_financing_requests` and `get_pipeline_stats` to review submissions \u2014 these require an admin or staff account and return sensitive applicant data, so handle it confidentially.",
   auth: auth.oauth.issuer({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated"

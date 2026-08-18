@@ -91,7 +91,7 @@ export default function OAuthConsent() {
                 ربط {details.client?.name ?? "تطبيق خارجي"} بحسابك
               </h1>
               <p className="text-sm text-muted-foreground mb-6">
-                سيتمكن {details.client?.name ?? "هذا التطبيق"} من استخدام أدوات موقع تمكين نيابةً
+                سيتمكن {details.client?.name ?? "هذا التطبيق"} من استخدام أدوات موقع سيولة البناء والسداد نيابةً
                 عنك، ضمن صلاحيات حسابك فقط.
               </p>
               <div className="flex gap-3">

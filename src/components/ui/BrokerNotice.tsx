@@ -7,7 +7,7 @@ export function BrokerNotice() {
         <Info className="w-3.5 h-3.5 text-gold shrink-0" aria-hidden="true" />
         <p className="leading-snug">
           <span className="font-semibold text-gold">تنويه:</span>{" "}
-          مكتب <span className="font-semibold">تمكين</span> يعمل بصفة <span className="font-semibold">وسيط تمويلي</span> ولا يُقدّم إقراضاً مباشراً.
+          شركة <span className="font-semibold">سيولة البناء والسداد</span> يعمل بصفة <span className="font-semibold">وسيط تمويلي</span> ولا يُقدّم إقراضاً مباشراً.
           جميع الطلبات تخضع للتحقق من الأهلية وموافقة الجهات الممولة المرخّصة من البنك المركزي السعودي.
         </p>
       </div>

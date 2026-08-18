@@ -56,7 +56,7 @@ const stats = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في معرفة المزيد عن خدماتكم");
-const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966553558587?text=${whatsappMessage}`;
 
 const About = () => {
   return (
@@ -64,7 +64,7 @@ const About = () => {
       {/* Hero Section */}
       <HeroSection
         title="من نحن"
-        subtitle="مكتب تمكين للحلول التمويلية"
+        subtitle="شركة سيولة البناء والسداد"
         description="شركة سعودية رائدة متخصصة في تقديم الحلول التمويلية المتكاملة. نجمع بين الخبرة العميقة والالتزام التام بالأنظمة السعودية لنكون شريكك الموثوق في رحلتك العقارية."
         showTrustBadges={false}
         variant="service"
@@ -87,7 +87,7 @@ const About = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -156,7 +156,7 @@ const About = () => {
                 رحلة من الخبرة والاحترافية
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                بدأت مكتب تمكين للحلول التمويلية رحلتها في سوق العقارات السعودي بهدف واضح: 
+                بدأت شركة سيولة البناء والسداد رحلتها في سوق العقارات السعودي بهدف واضح: 
                 تقديم خدمات تمويلية استثنائية تجمع بين المهنية العالية والالتزام الكامل بالأنظمة المعتمدة.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">

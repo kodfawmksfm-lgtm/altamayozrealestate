@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/tamkeen-logo.jpg.asset.json";
+import logo from "@/assets/syolabuild-logo.png.asset.json";
 
 const services = [
   { name: "التمويل الشخصي", href: "/services/ready-properties" },
@@ -43,17 +43,17 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
       <nav className="container-rtl">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-3 group" aria-label="تمكين للحلول التمويلية">
+          <Link to="/" className="flex items-center gap-3 group" aria-label="سيولة البناء والسداد">
             <img
               src={logo.url}
-              alt="شعار تمكين للحلول التمويلية"
+              alt="شعار سيولة البناء والسداد"
               width={56}
               height={56}
               className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-md transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:block">
-              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">تمكين</h1>
-              <p className="text-[10px] md:text-xs text-muted-foreground">للحلول التمويلية</p>
+              <h1 className="text-base md:text-lg font-bold text-foreground leading-tight">سيولة البناء والسداد</h1>
+              <p className="text-[10px] md:text-xs text-muted-foreground">للتمويل العقاري</p>
             </div>
           </Link>
 
@@ -110,14 +110,14 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+966567597514"
+              href="tel:+966553558587"
               className="flex items-center gap-1.5 text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="hidden xl:inline" dir="ltr">056 759 7514</span>
             </a>
             <a
-              href="https://wa.me/966567597514?text=مرحباً،%20أرغب%20في%20استشارة%20عقارية"
+              href="https://wa.me/966553558587?text=مرحباً،%20أرغب%20في%20استشارة%20عقارية"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -182,11 +182,11 @@ export function Header() {
                 )
               )}
               <div className="pt-3 mt-2 border-t border-border space-y-2">
-                <a href="tel:+966567597514" className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-accent text-foreground font-medium">
+                <a href="tel:+966553558587" className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-accent text-foreground font-medium">
                   <Phone className="w-5 h-5" />
                   <span dir="ltr">056 759 7514</span>
                 </a>
-                <a href="https://wa.me/966567597514" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://wa.me/966553558587" target="_blank" rel="noopener noreferrer" className="block">
                   <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2">
                     <MessageCircle className="w-5 h-5" />
                     استشارة مجانية واتساب

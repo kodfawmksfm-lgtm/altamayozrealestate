@@ -11,15 +11,15 @@
   },
   "mcp": {
     "server": {
-      "name": "tamkeen-mcp",
+      "name": "syolabuild-mcp",
       "version": "0.1.0",
-      "title": "Tamkeen Financing MCP"
+      "title": "Syola Build Financing MCP"
     },
     "tools": [
       {
         "name": "get_service_info",
         "title": "Get service info",
-        "description": "Return public information about Tamkeen's financing services, contact channels, and the regulatory disclaimer.",
+        "description": "Return public information about Syola Build's real-estate financing services, contact channels, and the regulatory disclaimer.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -35,7 +35,7 @@
       {
         "name": "list_leads",
         "title": "List leads",
-        "description": "List website contact leads (name, phone, service, message) for Tamkeen. Requires an admin or staff account.",
+        "description": "List website contact leads (name, phone, service, message) for Syola Build. Requires an admin or staff account.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

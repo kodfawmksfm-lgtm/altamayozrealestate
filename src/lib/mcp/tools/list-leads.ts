@@ -6,7 +6,7 @@ export default defineTool({
   name: "list_leads",
   title: "List leads",
   description:
-    "List website contact leads (name, phone, service, message) for Tamkeen. Requires an admin or staff account.",
+    "List website contact leads (name, phone, service, message) for Syola Build. Requires an admin or staff account.",
   inputSchema: {
     limit: z.number().int().describe("Maximum number of leads to return (default 20)."),
   },

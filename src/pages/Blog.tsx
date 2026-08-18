@@ -27,7 +27,7 @@ const featuredPost = {
   image: hero,
   date: "10 يوليو 2026",
   readTime: "8 دقائق",
-  author: "فريق تمكين",
+  author: "فريق سيولة البناء والسداد",
 };
 
 const posts = [
@@ -39,7 +39,7 @@ const posts = [
     image: img1,
     date: "5 يوليو 2026",
     readTime: "6 دقائق",
-    author: "فريق تمكين",
+    author: "فريق سيولة البناء والسداد",
     icon: Repeat,
   },
   {
@@ -61,7 +61,7 @@ const posts = [
     image: img3,
     date: "20 يونيو 2026",
     readTime: "6 دقائق",
-    author: "فريق تمكين",
+    author: "فريق سيولة البناء والسداد",
     icon: ShieldCheck,
   },
   {
@@ -72,7 +72,7 @@ const posts = [
     image: img4,
     date: "12 يونيو 2026",
     readTime: "5 دقائق",
-    author: "فريق تمكين",
+    author: "فريق سيولة البناء والسداد",
     icon: Wallet,
   },
   {
@@ -104,7 +104,7 @@ export default function Blog() {
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               محتوى عملي حول التمويل الشخصي، سداد القروض القائمة، حلول المتعثرين ودراسة الأهلية — بأسلوب واضح ومتوافق مع أنظمة البنك المركزي السعودي.
               <br />
-              <span className="text-xs text-muted-foreground/80">تمكين وسيط تمويلي، ولا يُقدّم إقراضاً مباشراً.</span>
+              <span className="text-xs text-muted-foreground/80">سيولة البناء والسداد وسيط تمويلي، ولا يُقدّم إقراضاً مباشراً.</span>
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function Blog() {
         <div className="container-rtl text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">جاهز لتقديم طلبك؟</h2>
           <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-            ابدأ بدراسة أهليتك مجاناً عبر تمكين — وسيط تمويلي يعمل ضمن الأنظمة السعودية. لا وعود مضمونة قبل التحقق، وموافقة الجهة الممولة هي القرار النهائي.
+            ابدأ بدراسة أهليتك مجاناً عبر سيولة البناء والسداد — وسيط تمويلي يعمل ضمن الأنظمة السعودية. لا وعود مضمونة قبل التحقق، وموافقة الجهة الممولة هي القرار النهائي.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/financing-request"><Button className="btn-gold w-full sm:w-auto">اطلب دراسة أهليتك</Button></Link>

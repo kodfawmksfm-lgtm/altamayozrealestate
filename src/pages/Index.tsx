@@ -10,24 +10,24 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
 
-const whatsapp = `https://wa.me/966567597514?text=${encodeURIComponent("مرحباً، أرغب باستشارة تمويلية مجانية من مكتب تمكين")}`;
+const whatsapp = `https://wa.me/966553558587?text=${encodeURIComponent("مرحباً، أرغب باستشارة تمويلية مجانية من شركة سيولة البناء والسداد")}`;
 
 const services = [
-  { icon: Briefcase, title: "تمويل شخصي", desc: "حلول تمويل شخصي مرنة تناسب وضعك المالي، بإجراءات ميسّرة ومتابعة احترافية حتى إتمام الطلب.", href: "/services/cash-financing" },
-  { icon: Repeat, title: "إعادة هيكلة الالتزامات", desc: "خطة عملية لإعادة تنظيم قروضك والتزاماتك الحالية بما يتناسب مع دخلك الشهري وقدرتك على السداد.", href: "/services/development" },
-  { icon: FileCheck, title: "حلول للمتعثرين", desc: "دراسة حالتك المالية وتقديم خيارات لتسوية المتعثرات وفق الأنظمة والشروط المعتمدة من الجهات الرقابية.", href: "/services/investment" },
-  { icon: BarChart3, title: "استشارات مالية", desc: "استشارات متخصصة في اتخاذ القرار التمويلي المناسب، مع مقارنة الخيارات المتاحة بشفافية كاملة.", href: "/services/ready-properties" },
-  { icon: Megaphone, title: "متابعة الطلبات", desc: "متابعة احترافية لطلبك مع الجهات التمويلية، وتحديث دوري لحالتك حتى صدور القرار النهائي.", href: "/services/marketing" },
-  { icon: FileSearch, title: "دراسة الأهلية", desc: "تحليل مبدئي لأهليتك التمويلية قبل تقديم الطلب لتوفير الوقت وزيادة فرص القبول.", href: "/services/design" },
+  { icon: Hammer, title: "تمويل البناء الذاتي", desc: "حلول تمويل لبناء منزلك على أرضك، بدراسة تكاليف واقعية ومتابعة الطلب مع الجهات التمويلية.", href: "/services/development" },
+  { icon: Home, title: "تمويل عقاري لشراء مسكن", desc: "خيارات تمويل لشراء الوحدات الجاهزة أو تحت الإنشاء، بمقارنة شفافة للبدائل المتاحة.", href: "/services/ready-properties" },
+  { icon: Briefcase, title: "سيولة مرتبطة بالعقار", desc: "استفد من قيمة عقارك للحصول على سيولة نظامية، وفق ضوابط الجهات التمويلية والدراسة الائتمانية.", href: "/services/cash-financing" },
+  { icon: Repeat, title: "سداد المتعثرات والالتزامات", desc: "خطة عملية لتسوية المتعثرات وإعادة تنظيم الالتزامات بما يتناسب مع الدخل والقدرة على السداد.", href: "/services/investment" },
+  { icon: BarChart3, title: "استشارات تمويلية", desc: "استشارة متخصصة قبل اتخاذ قرارك التمويلي، مع توضيح المتطلبات والمخاطر بشفافية كاملة.", href: "/services/marketing" },
+  { icon: FileSearch, title: "دراسة الأهلية", desc: "تحليل مبدئي لأهليتك التمويلية قبل تقديم الطلب لتوفير الوقت ورفع جودة الملف.", href: "/services/design" },
 ];
 
 const whyUs = [
-  { icon: ShieldCheck, title: "مكتب موثوق", desc: "خاضع لرقابة ومراجعة الجهات المختصة في المملكة" },
-  { icon: Award, title: "خبرة متخصصة", desc: "في التمويل الشخصي وإعادة هيكلة الالتزامات" },
-  { icon: FileCheck, title: "التزام نظامي", desc: "توافق كامل مع أنظمة الإقراض في المملكة" },
-  { icon: Users, title: "متابعة احترافية", desc: "فريق مرافق لك من الطلب حتى القرار" },
+  { icon: ShieldCheck, title: "شركة مسجّلة نظاماً", desc: "الرقم الوطني الموحد 7054954552 — نشاط تمويل عقاري" },
+  { icon: Award, title: "خبرة متخصصة", desc: "في تمويل البناء الذاتي والسيولة المرتبطة بالعقار" },
+  { icon: FileCheck, title: "التزام نظامي", desc: "توافق كامل مع الأنظمة التمويلية المعتمدة في المملكة" },
+  { icon: Users, title: "متابعة احترافية", desc: "فريق مرافق لك من الطلب حتى صدور القرار" },
   { icon: TrendingUp, title: "حلول مخصصة", desc: "مصممة وفق وضعك المالي وقدرتك على السداد" },
-  { icon: Eye, title: "شفافية كاملة", desc: "لا وعود مضمونة قبل دراسة الأهلية" },
+  { icon: Eye, title: "شفافية كاملة", desc: "لا وعود مضمونة قبل الدراسة الائتمانية" },
 ];
 
 const steps = [
@@ -117,7 +117,7 @@ const Index = () => {
                 <MessageCircle className="w-4 h-4" /> واتساب
               </Button>
             </a>
-            <a href="tel:+966567597514">
+            <a href="tel:+966553558587">
               <Button size="sm" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent gap-1.5">
                 <Phone className="w-4 h-4" /> اتصل الآن
               </Button>
@@ -131,9 +131,9 @@ const Index = () => {
         <div className="container-rtl">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4 bg-accent text-secondary">من نحن</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">مكتب تمكين للحلول التمويلية</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">شركة سيولة البناء والسداد</h2>
             <p className="text-muted-foreground leading-relaxed">
-              تأسست مكتب تمكين للحلول التمويلية انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
+              تأسست شركة سيولة البناء والسداد انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
               يمثلان حجر الأساس لبناء الأصول وتحقيق الاستقرار المالي على المدى الطويل.
             </p>
           </div>
@@ -206,7 +206,7 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container-rtl">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <Badge className="mb-4 bg-secondary text-secondary-foreground">لماذا تمكين</Badge>
+            <Badge className="mb-4 bg-secondary text-secondary-foreground">لماذا سيولة البناء والسداد</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">ست أسباب تجعلنا خيارك الأول</h2>
             <p className="text-muted-foreground">نتعامل بمصداقية مؤسسية وشفافية كاملة في كل خطوة</p>
           </div>
@@ -234,8 +234,9 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-3">خاضعون لرقابة الجهات المختصة</h2>
             <p className="text-secondary-foreground/75">نعمل تحت مظلة الأنظمة المعتمدة في المملكة العربية السعودية</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-4 gap-5">
             {[
+              { t: "سجل تجاري نشط", d: "الرقم الوطني الموحد 7054954552 — سيولة البناء والسداد" },
               { t: "تحقّق من الأهلية", d: "دراسة كل حالة على حدة وفق الشروط والأحكام المنظّمة" },
               { t: "شفافية كاملة", d: "لا وعود مضمونة بالتمويل أو معدلات فائدة قبل الدراسة" },
               { t: "رقابة ومراجعة", d: "الخدمات تخضع لرقابة الجهات المختصة في المملكة" },
@@ -335,7 +336,7 @@ const Index = () => {
         <div className="container-rtl">
           <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed">
             <ShieldCheck className="w-3.5 h-3.5 inline-block ml-1 text-gold" />
-            جميع الطلبات المقدَّمة إلى مكتب تمكين للحلول التمويلية تخضع للتحقق من الأهلية، ولا يُعدّ قبول الطلب أو استلامه موافقةً على الإقراض أو التمويل. تُدرَس كل حالة على حدة وفق معايير ووضع كل متقدّم طبقاً للشروط والأحكام المنظّمة. الخدمات تخضع لرقابة ومراجعة الجهات المختصة في المملكة العربية السعودية، ولا يُقدَّم أي وعد بمعدلات فائدة أو مبالغ أو فترات سداد مضمونة قبل الدراسة الائتمانية.
+            جميع الطلبات المقدَّمة إلى شركة سيولة البناء والسداد تخضع للتحقق من الأهلية، ولا يُعدّ قبول الطلب أو استلامه موافقةً على الإقراض أو التمويل. تُدرَس كل حالة على حدة وفق معايير ووضع كل متقدّم طبقاً للشروط والأحكام المنظّمة. الخدمات تخضع لرقابة ومراجعة الجهات المختصة في المملكة العربية السعودية، ولا يُقدَّم أي وعد بمعدلات فائدة أو مبالغ أو فترات سداد مضمونة قبل الدراسة الائتمانية.
           </p>
         </div>
       </section>

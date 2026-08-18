@@ -83,7 +83,7 @@ const testimonials = [
   {
     name: "ناصر القحطاني",
     role: "مالك فيلا",
-    content: "وجدت منزل أحلامي من خلال تمكين. خدمة ممتازة ومتابعة رائعة.",
+    content: "وجدت منزل أحلامي من خلال سيولة البناء والسداد. خدمة ممتازة ومتابعة رائعة.",
     rating: 5,
   },
   {
@@ -119,7 +119,7 @@ const faqItems = [
 
 export default function ReadyProperties() {
   const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن العقارات الجاهزة للتملك");
-  const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/966553558587?text=${whatsappMessage}`;
 
   return (
     <Layout>
@@ -129,7 +129,7 @@ export default function ReadyProperties() {
         description="نوفر لك تشكيلة واسعة من العقارات الجاهزة للتملك في أفضل المواقع، مع فحص شامل وضمان سلامة جميع الإجراءات القانونية."
         image={serviceImage}
         primaryCTA={{ text: "تصفح العقارات المتاحة", href: "#contact-form" }}
-        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966567597514" }}
+        secondaryCTA={{ text: "اتصل بنا الآن", href: "tel:+966553558587" }}
         variant="service"
       />
 
@@ -150,7 +150,7 @@ export default function ReadyProperties() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -386,7 +386,7 @@ export default function ReadyProperties() {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="lg" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10">
                   <Phone className="w-5 h-5 ml-2" />
                   اتصل الآن

@@ -74,7 +74,7 @@ ${formData.message ? `الرسالة: ${formData.message}` : ""}
 أقر بأنني اطلعت على الشروط والأحكام وأوافق عليها.
     `.trim();
 
-    const whatsappUrl = `https://wa.me/966567597514?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/966553558587?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
 
     toast({
@@ -178,7 +178,7 @@ ${formData.message ? `الرسالة: ${formData.message}` : ""}
             variant="outline"
             className="flex-1"
             onClick={() => {
-              const mailtoUrl = `mailto:info@tamkeen-sa.com?subject=استفسار عن ${services.find(s => s.value === formData.service)?.label || "الخدمات"}&body=${encodeURIComponent(`الاسم: ${formData.name}\nرقم الجوال: ${formData.phone}\n\n${formData.message}`)}`;
+              const mailtoUrl = `mailto:ahqha2020@gmail.com?subject=استفسار عن ${services.find(s => s.value === formData.service)?.label || "الخدمات"}&body=${encodeURIComponent(`الاسم: ${formData.name}\nرقم الجوال: ${formData.phone}\n\n${formData.message}`)}`;
               window.location.href = mailtoUrl;
             }}
           >
