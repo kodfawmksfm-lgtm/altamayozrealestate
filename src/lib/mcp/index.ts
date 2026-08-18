@@ -11,7 +11,7 @@ export default defineMcp({
   title: "Tamkeen Financing MCP",
   version: "0.1.0",
   instructions:
-    "Tools for مكتب تمكين للحلول التمويلية (a financing broker in Saudi Arabia). Use `get_service_info` for public service, contact and compliance details. Use `list_leads`, `list_financing_requests` and `get_pipeline_stats` to review submissions — these require an admin or staff account and return sensitive applicant data, so handle it confidentially.",
+    "Tools for شركة سيولة البناء والسداد (a financing broker in Saudi Arabia). Use `get_service_info` for public service, contact and compliance details. Use `list_leads`, `list_financing_requests` and `get_pipeline_stats` to review submissions — these require an admin or staff account and return sensitive applicant data, so handle it confidentially.",
   auth: auth.oauth.issuer({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated",

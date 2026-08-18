@@ -9,8 +9,8 @@ import { MessageCircle, Phone, Sparkles, HelpCircle } from "lucide-react";
 
 const generalFAQs: FAQItem[] = [
   {
-    question: "ما هي مكتب تمكين للحلول التمويلية؟",
-    answer: "مكتب تمكين للحلول التمويلية هي شركة سعودية متخصصة في تقديم الحلول التمويلية المتكاملة في مدينة الرياض. نقدم خدمات التمويل الشخصي، التطوير العقاري، الاستثمار، توفير العقارات الجاهزة، التصميم والترميم، ومتابعة الطلبات الحصري. جميع خدماتنا تتم وفق الأنظمة السعودية المعتمدة.",
+    question: "ما هي شركة سيولة البناء والسداد؟",
+    answer: "شركة سيولة البناء والسداد هي شركة سعودية متخصصة في تقديم الحلول التمويلية المتكاملة في مدينة الرياض. نقدم خدمات التمويل الشخصي، التطوير العقاري، الاستثمار، توفير العقارات الجاهزة، التصميم والترميم، ومتابعة الطلبات الحصري. جميع خدماتنا تتم وفق الأنظمة السعودية المعتمدة.",
   },
   {
     question: "هل خدماتكم متوافقة مع الأنظمة السعودية؟",
@@ -76,7 +76,7 @@ const legalFAQs: FAQItem[] = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، لدي سؤال أرغب في الاستفسار عنه");
-const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966553558587?text=${whatsappMessage}`;
 
 const FAQ = () => {
   return (
@@ -106,7 +106,7 @@ const FAQ = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن

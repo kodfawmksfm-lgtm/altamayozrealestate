@@ -65,7 +65,7 @@ export default function Auth() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-accent p-4">
       <Helmet>
-        <title>تسجيل الدخول | تمكين للحلول التمويلية</title>
+        <title>تسجيل الدخول | سيولة البناء والسداد</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <Card className="w-full max-w-md">

@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
 
-const whatsapp = `https://wa.me/966567597514?text=${encodeURIComponent("مرحباً، أرغب باستشارة تمويلية مجانية من مكتب تمكين")}`;
+const whatsapp = `https://wa.me/966553558587?text=${encodeURIComponent("مرحباً، أرغب باستشارة تمويلية مجانية من شركة سيولة البناء والسداد")}`;
 
 const services = [
   { icon: Briefcase, title: "تمويل شخصي", desc: "حلول تمويل شخصي مرنة تناسب وضعك المالي، بإجراءات ميسّرة ومتابعة احترافية حتى إتمام الطلب.", href: "/services/cash-financing" },
@@ -117,7 +117,7 @@ const Index = () => {
                 <MessageCircle className="w-4 h-4" /> واتساب
               </Button>
             </a>
-            <a href="tel:+966567597514">
+            <a href="tel:+966553558587">
               <Button size="sm" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent gap-1.5">
                 <Phone className="w-4 h-4" /> اتصل الآن
               </Button>
@@ -131,9 +131,9 @@ const Index = () => {
         <div className="container-rtl">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4 bg-accent text-secondary">من نحن</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">مكتب تمكين للحلول التمويلية</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">شركة سيولة البناء والسداد</h2>
             <p className="text-muted-foreground leading-relaxed">
-              تأسست مكتب تمكين للحلول التمويلية انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
+              تأسست شركة سيولة البناء والسداد انطلاقاً من رؤية تؤمن بأن التخطيط المالي والاستثمار المدروس
               يمثلان حجر الأساس لبناء الأصول وتحقيق الاستقرار المالي على المدى الطويل.
             </p>
           </div>
@@ -335,7 +335,7 @@ const Index = () => {
         <div className="container-rtl">
           <p className="text-xs text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed">
             <ShieldCheck className="w-3.5 h-3.5 inline-block ml-1 text-gold" />
-            جميع الطلبات المقدَّمة إلى مكتب تمكين للحلول التمويلية تخضع للتحقق من الأهلية، ولا يُعدّ قبول الطلب أو استلامه موافقةً على الإقراض أو التمويل. تُدرَس كل حالة على حدة وفق معايير ووضع كل متقدّم طبقاً للشروط والأحكام المنظّمة. الخدمات تخضع لرقابة ومراجعة الجهات المختصة في المملكة العربية السعودية، ولا يُقدَّم أي وعد بمعدلات فائدة أو مبالغ أو فترات سداد مضمونة قبل الدراسة الائتمانية.
+            جميع الطلبات المقدَّمة إلى شركة سيولة البناء والسداد تخضع للتحقق من الأهلية، ولا يُعدّ قبول الطلب أو استلامه موافقةً على الإقراض أو التمويل. تُدرَس كل حالة على حدة وفق معايير ووضع كل متقدّم طبقاً للشروط والأحكام المنظّمة. الخدمات تخضع لرقابة ومراجعة الجهات المختصة في المملكة العربية السعودية، ولا يُقدَّم أي وعد بمعدلات فائدة أو مبالغ أو فترات سداد مضمونة قبل الدراسة الائتمانية.
           </p>
         </div>
       </section>

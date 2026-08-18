@@ -19,22 +19,22 @@ const contactInfo = [
   {
     icon: Phone,
     title: "اتصل بنا",
-    value: "+966 56 759 7514",
-    href: "tel:+966567597514",
+    value: "+966 55 355 8587",
+    href: "tel:+966553558587",
     description: "متاحون للرد على استفساراتك",
   },
   {
     icon: MessageCircle,
     title: "واتساب",
-    value: "+966 56 759 7514",
-    href: "https://wa.me/966567597514",
+    value: "+966 55 355 8587",
+    href: "https://wa.me/966553558587",
     description: "رد سريع خلال دقائق ⚡",
   },
   {
     icon: Mail,
     title: "البريد الإلكتروني",
-    value: "info@tamkeen-sa.com",
-    href: "mailto:info@tamkeen-sa.com",
+    value: "ahqha2020@gmail.com",
+    href: "mailto:ahqha2020@gmail.com",
     description: "راسلنا في أي وقت",
   },
   {
@@ -46,7 +46,7 @@ const contactInfo = [
 ];
 
 const whatsappMessage = encodeURIComponent("مرحباً، أرغب في الاستفسار عن خدماتكم العقارية");
-const whatsappLink = `https://wa.me/966567597514?text=${whatsappMessage}`;
+const whatsappLink = `https://wa.me/966553558587?text=${whatsappMessage}`;
 
 const Contact = () => {
   return (
@@ -76,7 +76,7 @@ const Contact = () => {
                   <span className="animate-pulse">⚡</span>
                 </Button>
               </a>
-              <a href="tel:+966567597514">
+              <a href="tel:+966553558587">
                 <Button size="sm" variant="outline" className="border-gold-foreground text-gold-foreground hover:bg-gold-foreground/10 gap-2">
                   <Phone className="w-4 h-4" />
                   اتصل الآن
@@ -158,7 +158,7 @@ const Contact = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="موقع مكتب تمكين للحلول التمويلية"
+                    title="موقع شركة سيولة البناء والسداد"
                   />
                 </div>
               </Card>
